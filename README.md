@@ -1,5 +1,8 @@
 # Escape-Room
-A Virtual Escape Room Game
+We created a Virtual Escape Room Game where the user needs to answer clues before the room blows up. 
 
-THIS IS NOT A TEST
-JK THIS IS A TEST 
+**Project Members**
+1. Ally  
+2. Henok  
+3. Vij  
+4. Brendon  
