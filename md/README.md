@@ -47,4 +47,9 @@ We created a Virtual Escape Room Game where the user needs to answer clues befor
 ### Acceptance Tests
         a. when a question is answered user moves onto next question
 
+
+## Wire Frame ##
 ![wireframe](/img/WireFrame.jpg)
+
+## Domain Model ##
+![Domain Model](/img/DomainModel.png)
