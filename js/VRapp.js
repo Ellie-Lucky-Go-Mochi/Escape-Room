@@ -2,18 +2,24 @@
 
 ///////// Attempt to make the code DRY///////////
 
-// Global Arrays //
+//////////////////////// Global Arrays /////////////////////////
 var ageArray = [];
 var allergyArray = [];
 var weatherArray = [];
 var riddleArray = [];
+var ageIndexArray = [];
+var allergyIndexArray = [];
+var weatherIndexArray = [];
+var riddleIndexArray = [];
 var score = 0;
 
+/////////////////////////////CREATING ALL THE ARRAYS ///////////////
 //////Object construction for all six questions //
 // Creating the Age trait array
 function Age (age,drink) {
   this.age = age;
   this.ans = drink;
+  // this.indexArray = [];
   ageArray.push(this);
 }
 
@@ -115,15 +121,86 @@ function createRiddleArray () {
   new Riddle('What goes up but never comes down?','age');
 
 }
+//////////////////////////////////////////////////////////////////
 
-// Calling functions
+
+////////////////////////////////////Generating Random Numbers////////
+//Unique Random functions
+function randomIndex(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+function uniqueRandomAgeNumber(){
+  var randomAgeIndex = randomIndex(ageArray.length);
+  while(ageIndexArray.includes(randomAgeIndex)){
+    randomAgeIndex = randomIndex(ageArray.length);    
+  }
+  ageIndexArray.push(randomAgeIndex);
+  if (ageIndexArray.length === 3) {
+    ageIndexArray.shift();
+  }
+  console.log('this is the ageIndexArray', ageIndexArray);
+}
+
+function uniqueRandomWeatherNumber(){
+  var randomWeatherIndex = randomIndex(weatherArray.length);
+  while(weatherIndexArray.includes(randomWeatherIndex)){
+    randomWeatherIndex = randomIndex(weatherArray.length);    
+  }
+  weatherIndexArray.push(randomWeatherIndex);
+  if (weatherIndexArray.length === 3) {
+    weatherIndexArray.shift();
+  }
+  console.log('this is the weatherIndexArray', weatherIndexArray);
+}
+
+function uniqueRandomAllergyNumber(){
+  var randomAllergyIndex = randomIndex(allergyArray.length);
+  while(allergyIndexArray.includes(randomAllergyIndex)){
+    randomAllergyIndex = randomIndex(allergyArray.length);    
+  }
+  allergyIndexArray.push(randomAllergyIndex);
+  if (allergyIndexArray.length === 3) {
+    allergyIndexArray.shift();
+  }
+  console.log('this is the allergyIndexArray', allergyIndexArray);
+}
+
+function uniqueRandomRiddleNumber(){
+  var randomRiddleIndex = randomIndex(riddleArray.length);
+  while(riddleIndexArray.includes(randomRiddleIndex)){
+    randomRiddleIndex = randomIndex(riddleArray.length);    
+  }
+  riddleIndexArray.push(randomRiddleIndex);
+  if (riddleIndexArray.length === 3) {
+    riddleIndexArray.shift();
+  }
+  console.log('this is the riddleIndexArray', riddleIndexArray);
+}
+
+/////////////////////////////////////////////////////////////////
+
+//////////////////////// CALLING FUNCTIONS //////////////////////
 
 //// Generate all the Arrays on page load
 function createOnPageLoad() {
-  createAgeArray();
-  createAllergyArray();
-  createWeatherArray();
-  createRiddleArray();
+  createAgeArray(); 
+  createAllergyArray(); 
+  createWeatherArray(); 
+  createRiddleArray();   
+  console.table(ageArray);
+  console.table(allergyArray);
+  console.table(weatherArray);
+  console.table(riddleArray);
+}
+createOnPageLoad();
+
+// for loop to try and call random unique number functions
+for (var i = 0; i < 5; i++) {
+  uniqueRandomAgeNumber();
+  uniqueRandomWeatherNumber();
+  uniqueRandomAllergyNumber();
+  uniqueRandomRiddleNumber();
 }
 
-createOnPageLoad();
+/////////////////////////////////////////////////////////////////
