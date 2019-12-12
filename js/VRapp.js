@@ -3,6 +3,8 @@
 ///////// Attempt to make the code DRY///////////
 
 //////////////////////// Global Arrays /////////////////////////
+
+//// Global Array for the traits and questions////
 var ageArray = [];
 var allergyArray = [];
 var weatherArray = [];
@@ -12,6 +14,10 @@ var allergyIndexArray = [];
 var weatherIndexArray = [];
 var riddleIndexArray = [];
 var score = 0;
+
+//// global arrays for the timer///
+//set minutes//
+var mins = 2;
 
 /////////////////////////////CREATING ALL THE ARRAYS ///////////////
 //////Object construction for all six questions //
@@ -133,7 +139,7 @@ function randomIndex(max) {
 function uniqueRandomAgeNumber(){
   var randomAgeIndex = randomIndex(ageArray.length);
   while(ageIndexArray.includes(randomAgeIndex)){
-    randomAgeIndex = randomIndex(ageArray.length);    
+    randomAgeIndex = randomIndex(ageArray.length);
   }
   ageIndexArray.push(randomAgeIndex);
   if (ageIndexArray.length === 3) {
@@ -145,7 +151,7 @@ function uniqueRandomAgeNumber(){
 function uniqueRandomWeatherNumber(){
   var randomWeatherIndex = randomIndex(weatherArray.length);
   while(weatherIndexArray.includes(randomWeatherIndex)){
-    randomWeatherIndex = randomIndex(weatherArray.length);    
+    randomWeatherIndex = randomIndex(weatherArray.length);
   }
   weatherIndexArray.push(randomWeatherIndex);
   if (weatherIndexArray.length === 3) {
@@ -157,7 +163,7 @@ function uniqueRandomWeatherNumber(){
 function uniqueRandomAllergyNumber(){
   var randomAllergyIndex = randomIndex(allergyArray.length);
   while(allergyIndexArray.includes(randomAllergyIndex)){
-    randomAllergyIndex = randomIndex(allergyArray.length);    
+    randomAllergyIndex = randomIndex(allergyArray.length);
   }
   allergyIndexArray.push(randomAllergyIndex);
   if (allergyIndexArray.length === 3) {
@@ -169,7 +175,7 @@ function uniqueRandomAllergyNumber(){
 function uniqueRandomRiddleNumber(){
   var randomRiddleIndex = randomIndex(riddleArray.length);
   while(riddleIndexArray.includes(randomRiddleIndex)){
-    randomRiddleIndex = randomIndex(riddleArray.length);    
+    randomRiddleIndex = randomIndex(riddleArray.length);
   }
   riddleIndexArray.push(randomRiddleIndex);
   if (riddleIndexArray.length === 3) {
@@ -184,10 +190,10 @@ function uniqueRandomRiddleNumber(){
 
 //// Generate all the Arrays on page load
 function createOnPageLoad() {
-  createAgeArray(); 
-  createAllergyArray(); 
-  createWeatherArray(); 
-  createRiddleArray();   
+  createAgeArray();
+  createAllergyArray();
+  createWeatherArray();
+  createRiddleArray();
   console.table(ageArray);
   console.table(allergyArray);
   console.table(weatherArray);
@@ -203,4 +209,68 @@ for (var i = 0; i < 5; i++) {
   uniqueRandomRiddleNumber();
 }
 
-/////////////////////////////////////////////////////////////////
+///////////////////////TIMER ON THE PAGE////////////////////////////
+
+//calculate the seconds//
+var secs = mins * 60;
+
+//countdown function is evoked when page is loaded //
+function countdown() {
+  setTimeout('Decrement()', 60);
+}
+
+//Decrement function decrement the value.
+function Decrement() {
+  if (document.getElementById) {
+    var minutes = document.getElementById('minutes');
+    var seconds = document.getElementById('seconds');
+
+    //if less than a minute remaining
+    //Display only seconds value.
+    if (seconds < 59) {
+      seconds.value = secs;
+    }
+
+    //Display both minutes and seconds
+    //getminutes and getseconds is used to
+    //get minutes and seconds
+    else {
+      minutes.value = getminutes();
+      seconds.value = getseconds();
+    }
+    //when less than a minute remaining
+    //colour of the minutes and seconds
+    //changes to red
+    if (mins < 1) {
+      minutes.style.color = 'red';
+      seconds.style.color = 'red';
+    }
+    //if seconds becomes zero,
+    //then page alert time up
+    if (mins < 0) {
+      alert('time up');
+      minutes.value = 0;
+      seconds.value = 0;
+    }
+    //if seconds > 0 then seconds is decremented
+    else {
+      secs--;
+      setTimeout('Decrement()', 1000);
+    }
+  }
+}
+
+function getminutes() {
+  //minutes is seconds divided by 60, rounded down
+  mins = Math.floor(secs / 60);
+  return mins;
+}
+
+function getseconds() {
+  //take minutes remaining (as seconds) away
+  //from total seconds remaining
+  return secs - Math.round(mins * 60);
+}
+
+countdown();
+//////////////////////////////////////////////////////////////////
