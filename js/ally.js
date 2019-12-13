@@ -1,7 +1,6 @@
 'use scrict';
 
 ///// Global Arrays /////
-
 var ageArray = [{ age: 5, ans: 'N' }, { age: 10, ans: 'N' }, { age: 15, ans: 'N' }, { age: 20, ans: 'N' }, { age: 40, ans: 'Y' }, { age: 80, ans: 'Y' }];
 var allergyArray = ['shellfish', 'peanuts', 'dairy', 'soy'];
 var weatherArray = ['sunny', 'snowing', 'raining'];
@@ -27,30 +26,7 @@ var questionArray = ['There\'s a snickers on the table! Do you eat it?', 'You ar
 // console.log(weather);
 // console.log(allergy);
 
-
-
-////////////////////////// Vij's functions////////////
-// global text question
-var index = Math.floor(Math.random() * ageArray.length);
-var age = ageArray[index].age;
-var questionArray = [
-  'Will you drink from this bottle?'
-]
-var userAnswer = [];
-
-for (var i = 0; i<questionArray.length; i++){
-  console.log('this is your age:',age,questionArray[i]);
-  var answer = prompt ('what is your answer');
-  userAnswer.push(answer);cod
-}
-
-// for (var k=0; k<questionArray.length; k++){
-if (ageArray[index].ans === userAnswer[0]) {
-  alert('WellDone');
-} else {
-  alert ('Too Bad!');
-}
-// }
+///// Global Functions /////
 
 /////Global Variable ////
 var click = 0;
@@ -91,7 +67,3 @@ function checkAnswer() {
     }
   }
 }
-
-
-
-

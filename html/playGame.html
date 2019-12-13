@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Escape Room</title>
 </head>
+
 <body>
+
     <h1>Game</h1>
     <div> 
             This is the timer :: 
@@ -19,7 +22,16 @@
             <input id="seconds" type="text" style="width: 20px; 
                             border: none; font-size: 16px; 
                             font-weight: bold; color: black;"> 
-        </div>
+    </div>
+
+    <form id="questions">
+            <label>Your answer:</label>
+            <input type="radio" name="answer" id="true"> Yes
+            <input type="radio" name="answer" id="false"> No
+            <button type = "button" onclick = "checkAnswer()">Submit</button>
+    </form>
 </body>
-<script src="/js/VRapp.js"></script>
+<script src="/js/app.js"></script>
+
+
 </html>
