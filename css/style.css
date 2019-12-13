@@ -1,0 +1,49 @@
+#page1 {
+    background-image: url(/img/brick1.jpg);
+    box-sizing: border-box;
+    text-align: center;
+    margin: 50px;
+}
+
+#page2 {
+    background-image: url(/img/brick2.jpg);
+}
+
+h1, h2 {
+    padding: 50px;
+    /* border: solid black 1px; */
+    font-family: 'Creepster', cursive;
+    font-size: 100px;
+    background-color: hsla(37, 6%, 95%, 0.3);
+    box-shadow: inset 0 0 10px #777777;
+}
+
+p {
+    /* border: solid black 1px; */
+    font-family: 'Bree Serif', serif;
+    font-size: 35px;
+    margin: 20px 50px;
+    padding: 30px;
+    background-color: #F9F4eb;
+    background-color: hsla(37, 6%, 95%, 0.5);
+    box-shadow: inset 0 0 10px #777777;
+}
+
+#userName, input {
+    /* border: solid black 1px; */
+    font-family: 'Bree Serif', serif;
+    font-size: 30px;
+    margin: 20px 200px;
+    white-space: pre-line;
+    background-color: #F9F4eb;
+    background-color: hsla(37, 6%, 95%, 0.5);
+    box-shadow: inset 0 0 10px #777777;    
+}
+
+input {
+    text-align: center;
+}
+
+#scores {
+    border: solid black 1px;
+}

@@ -48,7 +48,10 @@ function hide(elem) {
   elem.style.display = 'none';
 }
 
-function checkAnswer() {
+var form = document.getElementsByTagName('button');
+
+function checkAnswer(event) {
+  event.preventDefault();
   var ele = document.getElementsByName('answer');
   for (var i = 0; i < ele.length; i++) {
     if (ele[i].checked === true) {
@@ -67,3 +70,4 @@ function checkAnswer() {
     }
   }
 }
+form.eventListener('submit', checkAnswer);
