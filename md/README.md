@@ -53,3 +53,12 @@ We created a Virtual Escape Room Game where the user needs to answer clues befor
 
 ## Domain Model ##
 ![Domain Model](/img/DomainModel.png)
+
+## Resources ##
+[Random Number Generator from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)    
+[Google Fonts](https://fonts.google.com/?category=Display&selection.family=Rammetto+One)  
+??[Chart JS](https://www.chartjs.org/docs/latest/)
+[HomePage-Brick Image](https://unsplash.com/)  
+[GamePage-Brick Image](https://unsplash.com/)  
+[Timer Function](https://www.geeksforgeeks.org/javascript-timer/  )
+
