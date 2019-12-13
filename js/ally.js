@@ -67,10 +67,3 @@ function checkAnswer() {
     }
   }
 }
-
-
-
-
-
-
-
