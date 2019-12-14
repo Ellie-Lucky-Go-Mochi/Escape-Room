@@ -14,36 +14,33 @@ var btnTwo = document.createElement('button');
 var btnThree = document.createElement('button');
 var btnFour = document.createElement('button');
 var questionBox = document.getElementById('question');
-var round=0;
+
+var round = 0;
+var clue = 0;
 
 var hideContainer = document.getElementById('container');
 
-// var clueArray = ['a','b','c','d','e','f']
+var clueArray = ['a','b','c','d','e','f'];
 
-// function Geeks() {
-//   var myDiv = document.getElementById('GFG');
 
-//   // creating button element
-//   var button = document.createElement('BUTTON');
-
-//   // creating text to be
-//   //displayed on button
-//   var text = document.createTextNode('Button');
-
-//   // appending text to button
-//   button.appendChild(text);
-
-//   // appending button to div
-//   myDiv.appendChild(button);
-// }
 
 function randomIndex(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
 // Creating the Riddle questions
-function Riddle (riddle,reply,choiceOne,choiceTwo, choiceThree, choiceFour) {
-  this.riddle = riddle;
+// function Riddle (riddle,reply,choiceOne,choiceTwo, choiceThree, choiceFour) {
+//   this.riddle = riddle;
+//   this.reply = reply;
+//   this.choiceOne = choiceOne; ///choice
+//   this.choiceTwo = choiceTwo; //choices
+//   this.choiceThree = choiceThree;
+//   this.choiceFour = choiceFour;
+//   riddleArray.push(this);
+// }
+
+function Riddle (bioTrait,questionTrait,reply,choiceOne,choiceTwo, choiceThree, choiceFour) {
+  this.riddle = ;
   this.reply = reply;
   this.choiceOne = choiceOne; ///choice
   this.choiceTwo = choiceTwo; //choices
@@ -55,17 +52,23 @@ function Riddle (riddle,reply,choiceOne,choiceTwo, choiceThree, choiceFour) {
 // hide function
 function hide(elem) {
   elem.style.display = 'none';
-}
+};
+
+//show function
+function show(elem) {
+  elem.style.display = 'block';
+};
+
 
 // next question button
 function nextQuestion(){
-  // hide(question);
+  hide(answer);
   hide(p);
   round++;
-  hide(btnOne)
-  hide(btnTwo)
-  hide(btnThree)
-  hide(btnFour)
+  hide(btnOne);
+  hide(btnTwo);
+  hide(btnThree);
+  hide(btnFour);
   makeButton();
   makeQuestion();
   btnOne.addEventListener('click', checkAnswer);
@@ -106,9 +109,10 @@ function checkAnswer(event) {
   event.preventDefault();
   var button = event.target.textContent;
   console.log(button);
-  if (button === riddleArray[round].reply ) {
-    document.getElementById('answer').innerHTML = 'Thats right';
-
+  if (button === riddleArray[round].reply) {
+    document.getElementById('answer').innerHTML = `That's right! ${clueArray[clue]}`;
+    show(answer);
+    clue++;
   }
   else (
     document.getElementById('answer').innerHTML = 'Thats wrong!!');

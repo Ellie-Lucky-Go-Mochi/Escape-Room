@@ -68,7 +68,7 @@ function makeQuestions() {
 makeQuestions();
 
 ///// HIDE FUNCTION /////
-function hide(elem) {
+function hide(
   elem.style.display = 'none';
 }
 
