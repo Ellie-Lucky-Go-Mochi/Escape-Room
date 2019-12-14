@@ -14,8 +14,10 @@ var btnTwo = document.createElement('button');
 var btnThree = document.createElement('button');
 var btnFour = document.createElement('button');
 var questionBox = document.getElementById('question');
+
 var round = 0;
-var count = 0;
+var clue = 0;
+
 var hideContainer = document.getElementById('container');
 
 var clueArray = ['a','b','c','d','e','f'];
@@ -27,8 +29,18 @@ function randomIndex(max) {
 }
 
 // Creating the Riddle questions
-function Riddle (riddle,reply,choiceOne,choiceTwo, choiceThree, choiceFour) {
-  this.riddle = riddle;
+// function Riddle (riddle,reply,choiceOne,choiceTwo, choiceThree, choiceFour) {
+//   this.riddle = riddle;
+//   this.reply = reply;
+//   this.choiceOne = choiceOne; ///choice
+//   this.choiceTwo = choiceTwo; //choices
+//   this.choiceThree = choiceThree;
+//   this.choiceFour = choiceFour;
+//   riddleArray.push(this);
+// }
+
+function Riddle (bioTrait,questionTrait,reply,choiceOne,choiceTwo, choiceThree, choiceFour) {
+  this.riddle = ;
   this.reply = reply;
   this.choiceOne = choiceOne; ///choice
   this.choiceTwo = choiceTwo; //choices
@@ -98,9 +110,9 @@ function checkAnswer(event) {
   var button = event.target.textContent;
   console.log(button);
   if (button === riddleArray[round].reply) {
-    document.getElementById('answer').innerHTML = `That's right! ${clueArray[count]}`;
+    document.getElementById('answer').innerHTML = `That's right! ${clueArray[clue]}`;
     show(answer);
-    count++;
+    clue++;
   }
   else (
     document.getElementById('answer').innerHTML = 'Thats wrong!!');
