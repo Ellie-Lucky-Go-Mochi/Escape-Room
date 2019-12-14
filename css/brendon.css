@@ -8,11 +8,11 @@ body {
 }
 button {
     font-size:large;
-    border: none;
     opacity: .6;
     margin: 5%;
     background-color: white;
     border-radius: 30% 60% 70% 90%;
+    border-color: greenyellow;
 }
 
 h3 {
