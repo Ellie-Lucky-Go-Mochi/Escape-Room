@@ -10,8 +10,8 @@ var btnTwo = document.createElement('button');
 var btnThree = document.createElement('button');
 var btnFour = document.createElement('button');
 var questionBox = document.getElementById('question')
-var round= 0;
-var score= 0; 
+var round = 0;
+var score = 0; 
 var container = document.getElementById('container');
 // function Geeks() {
 //   var myDiv = document.getElementById('GFG');
@@ -99,7 +99,7 @@ function createRiddleArray () {
   new Riddle ('What has a head and a tail, but no body?','Coin','Snake', 'Coin', 'paper','towel');
   new Riddle ('What has an eye but can not see?','Needle','Bat', 'Pen', 'Needle', 'Pirate');
   new Riddle ('What gets wetter and wetter the more it dries?','Towel', 'Toe', 'Water', 'Face', 'Towel' );
-  new Riddle ('Your height is six feet, you are an assistant at a butcher shop, and you wear size 9 shoes. What do you weigh in pounds?', 'Meat' '192', 'Table');
+  new Riddle ('Your height is six feet, you are an assistant at a butcher shop, and you wear size 9 shoes. What do you weigh in pounds?', 'Meat', '192', 'Table');
   // new Riddle ('There was a green house. Inside the green house there was a white house. Inside the white house there was a red house. Inside the red house there were lots of babies. What is it?','watermelon');
   // new Riddle ('What kind of room has no doors or windows?','mushroom');
   // new Riddle ('What kind of tree can you carry in your hand?','palm');
@@ -135,7 +135,7 @@ createRiddleArray();
 console.log(round);
 p.textContent = riddleArray[round].riddle;
 questionBox.appendChild(p);
-makeButton()
+makeButton();
 btnOne.addEventListener("click", checkAnswer);
 btnTwo.addEventListener("click", checkAnswer);
 btnThree.addEventListener("click", checkAnswer);
