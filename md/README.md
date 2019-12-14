@@ -57,8 +57,11 @@ We created a Virtual Escape Room Game where the user needs to answer clues befor
 ## Resources ##
 [Random Number Generator from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)    
 [Google Fonts](https://fonts.google.com/?category=Display&selection.family=Rammetto+One)  
-??[Chart JS](https://www.chartjs.org/docs/latest/)
-[HomePage-Brick Image](https://unsplash.com/)  
-[GamePage-Brick Image](https://unsplash.com/)  
+??[Chart JS](https://www.chartjs.org/docs/latest/) 
 [Timer Function](https://www.geeksforgeeks.org/javascript-timer/  )
 
+## Image Links ##
+[HomePage-Brick Image](https://unsplash.com/)  
+[GamePage-Brick Image](https://unsplash.com/)  
+[Blood-splash](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlYvyNujTDMFpxcN6xzhcmHbil44f3ilcbK8CSVN_Kjp3ALhJJJg&s)  
+[Blood-hand]( https://media.wired.com/photos/5bd262d4b1e96429a704ba17/master/w_2560%2Cc_limit/bloodyhand_top-1036615756.jpg)  
