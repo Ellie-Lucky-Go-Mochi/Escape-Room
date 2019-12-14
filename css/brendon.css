@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+    color: white;
+    background-image: url(/img/brick2.jpg);
+    max-width: 500px;
+}
+button {
+    font-size:large;
+    border: none;
+    opacity: .6;
+    margin: 5%;
+    background-color: white;
+    border-radius: 30% 60% 70% 90%;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-style: oblique;
+}
