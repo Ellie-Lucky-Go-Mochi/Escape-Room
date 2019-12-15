@@ -39,8 +39,8 @@ function randomIndex(max) {
 //   riddleArray.push(this);
 // }
 
-function Riddle (bioTrait,questionTrait,reply,choiceOne,choiceTwo, choiceThree, choiceFour) {
-  this.riddle = ;
+function Riddle (riddle,reply,choiceOne,choiceTwo, choiceThree, choiceFour) {
+  this.riddle = riddle;
   this.reply = reply;
   this.choiceOne = choiceOne; ///choice
   this.choiceTwo = choiceTwo; //choices
@@ -89,19 +89,19 @@ function makeQuestion(){
 function makeButton() {
   btnOne = document.createElement('button');
   btnOne.textContent = riddleArray[round].choiceOne;
-  hideContainer.appendChild(btnOne);
+  buttonBox.appendChild(btnOne);
 
   btnTwo = document.createElement('button');
   btnTwo.textContent = riddleArray[round].choiceTwo;
-  hideContainer.appendChild(btnTwo);
+  buttonBox.appendChild(btnTwo);
 
   btnThree = document.createElement('button');
   btnThree.textContent = riddleArray[round].choiceThree;
-  hideContainer.appendChild(btnThree);
+  buttonBox.appendChild(btnThree);
 
   btnFour = document.createElement('button');
   btnFour.textContent = riddleArray[round].choiceFour;
-  hideContainer.appendChild(btnFour);
+  buttonBox.appendChild(btnFour);
 }
 
 
@@ -124,7 +124,7 @@ function createRiddleArray () {
   new Riddle ('What has an eye but can not see?','needle','eyeglasses','');
   new Riddle ('What gets wetter and wetter the more it dries?','towel');
   new Riddle ('Your height is six feet, you are an assistant at a butcher shop, and you wear size 9 shoes. What do you weigh in pounds?', 'meat');
-  new Riddle ('There was a green house. Inside the green house there was a white house. Inside the white house there was a red house. Inside the red house there were lots of babies. What is it?','watermelon');
+  // new Riddle ('There was a green house. Inside the green house there was a white house. Inside the white house there was a red house. Inside the red house there were lots of babies. What is it?','watermelon');
   // new Riddle ('What kind of room has no doors or windows?','mushroom');
   // new Riddle ('What kind of tree can you carry in your hand?','palm');
   // new Riddle ('Which word in the dictionary is spelled incorrectly?','incorrectly');
