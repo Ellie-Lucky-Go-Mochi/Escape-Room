@@ -4,20 +4,25 @@ var riddleArray = [];
 var riddleIndexArray = [];
 var allergyArray = [];
 var allergyIndexArray = [];
+var userArray = [];
+var name = '';
+
+var clueArray = ['clue1','clue2','clue3','clue4','clue5','clue6'];
+
 var round = 5;
 var score = 0;
+var clue = 0;
 
 ///// CREATE BUTTONS /////
 var btnOne = document.createElement('button');
 var btnTwo = document.createElement('button');
 var btnThree = document.createElement('button');
 var btnFour = document.createElement('button');
-
+var buttonBox = document.getElementById('button-container');
 var nextPage = document.getElementById('nextPage');
 
 ///// CREATE QUESTION /////
 var questionBox = document.getElementById('question');
-
 var container = document.getElementById('container');
 
 
@@ -30,12 +35,12 @@ function randomIndex(max) {
 ///// HIDE FUNC /////
 function hide(elem) {
   elem.style.display = 'none';
-};
+}
 
 ///// SHOW FUNC /////
 function show(elem) {
   elem.style.display = 'block';
-};
+}
 
 
 ///// RIDDLE CONSTRUCTOR /////
@@ -50,13 +55,14 @@ function Riddle(riddle, reply, choiceOne, choiceTwo, choiceThree, choiceFour) {
   riddleArray.push(this);
 }
 
+
 function createRiddleArray() {
   new Riddle('You can drop me from the tallest building and I will be fine, but if you drop me in water I die. What am I?', 'Paper', 'Rock', 'Scissor', 'Paper', 'Bat');
   new Riddle('What has a head and a tail, but no body?', 'Coin', 'Snake', 'Coin', 'paper', 'towel');
   new Riddle('What has an eye but can not see?', 'Needle', 'Bat', 'Pen', 'Needle', 'Pirate');
   new Riddle('What gets wetter and wetter the more it dries?', 'Towel', 'Toe', 'Water', 'Face', 'Towel');
   new Riddle('Your height is six feet, you are an assistant at a butcher shop, and you wear size 9 shoes. What do you weigh in pounds?', 'Meat', '192', 'Table', 'Horse', 'Meat');
-  new Riddle ('There was a green house. Inside the green house there was a white house. Inside the white house there was a red house. Inside the red house there were lots of babies. What is it?','watermelon');
+  new Riddle ('There was a green house. Inside the green house there was a white house. Inside the white house there was a red house. Inside the red house there were lots of babies. What is it?','watermelon','lime','watermelon','blah', 'blah');
   new Riddle ('What kind of room has no doors or windows?','mushroom');
   new Riddle ('What kind of tree can you carry in your hand?','palm');
   new Riddle ('Which word in the dictionary is spelled incorrectly?','incorrectly');
@@ -114,6 +120,29 @@ function createAllergyArray() {
   // new Allergy ('fava beans', 'edamame', 'Y' );
 }
 
+///// USER CONSTRUCTOR /////
+function MakeUserArray(username, score){
+  this.username = username;
+  this.score = score;
+  userArray.push(this);
+}
+
+
+///// get user name
+var userInput = document.getElementById('userInput');
+userInput.addEventListener('submit', handleClick);
+
+///// USER HANDLECLICK EVENT /////
+
+function handleClick(event){
+  event.preventDefault();
+  name = event.target.name.value;
+  // return name;
+  MakeUserArray.user = name;
+  userArray.push(MakeUserArray.user);
+  localStorage.setItem('firstUser',JSON.stringify(userArray));
+  // console.log(userArray);
+}
 
 //// generate random traits
 
@@ -129,19 +158,19 @@ function makeQuestion() {
 function makeButton() {
   btnOne = document.createElement('button');
   btnOne.textContent = riddleArray[round].choiceOne;
-  container.appendChild(btnOne);
+  buttonBox.appendChild(btnOne);
 
   btnTwo = document.createElement('button');
   btnTwo.textContent = riddleArray[round].choiceTwo;
-  container.appendChild(btnTwo);
+  buttonBox.appendChild(btnTwo);
 
   btnThree = document.createElement('button');
   btnThree.textContent = riddleArray[round].choiceThree;
-  container.appendChild(btnThree);
+  buttonBox.appendChild(btnThree);
 
   btnFour = document.createElement('button');
   btnFour.textContent = riddleArray[round].choiceFour;
-  container.appendChild(btnFour);
+  buttonBox.appendChild(btnFour);
 }
 
 ///// FUNC TO CHECK ANSWERS /////
@@ -150,17 +179,22 @@ function checkAnswer(event) {
   var button = event.target.textContent;
   console.log(button);
   if (button === riddleArray[round].reply) {
-    document.getElementById('answer').innerHTML = 'Thats right';
+    show(answer)
+    document.getElementById('answer').innerHTML = `That's right! ${clueArray[clue]}`;
+    clue++
     score += 100;
     console.log(score);
+    hide(buttonBox);
   }
-  else (
-    document.getElementById('answer').innerHTML = 'Thats wrong!!');
+  else {
+    hide(buttonBox);
+    show(answer)
+    document.getElementById('answer').innerHTML = 'Thats wrong!!'};
 }
 
 ///// FUNC TO NEXT QUESTION ////.
 function nextQuestion() {
-  // hide(answer);
+  hide(answer);
   hide(p);
   round--;
   hide(btnOne);
@@ -170,6 +204,7 @@ function nextQuestion() {
   if (round >= 0) {
     console.log('This is round', round);
     makeButton();
+    show(buttonBox);
     makeQuestion();
     btnOne.addEventListener('click', checkAnswer);
     btnTwo.addEventListener('click', checkAnswer);
@@ -178,12 +213,36 @@ function nextQuestion() {
   } else {
     var nextQ = document.getElementById('nextQuestion');
     hide(nextQ);
+    new MakeUserArray(name,score);
+    localStorage.setItem('gameUser', JSON.stringify(userArray));
+    // MakeUserArray.score = score;
+    // userArray.push(MakeUserArray.score);
+    saveArray();
+    show(answer)
+    document.getElementById('answer').innerHTML = `Your score is: ${score}`;
     show(nextPage);
     // var scorePage = document.createElement('a');
     // scorePage.href = './html/scoreBoard.html';
     // scorePage.text = 'check your score';
+  
   }
 }
+
+///// STORE SCORE /////
+
+function saveArray(){
+  var scoreString = JSON.stringify(userArray);
+  // var userString = JSON.stringify(username);
+  localStorage.setItem('userScore', scoreString);
+}
+
+///// GET SCORE /////
+function parseScore(){
+  var retrieveScore = localStorage.getItem('userScore');
+  var parsedScore = JSON.parse(retrieveScore);
+  console.log(parsedScore);
+}
+
 
 
 ///// Function to create array
@@ -200,6 +259,7 @@ btnOne.addEventListener('click', checkAnswer);
 btnTwo.addEventListener('click', checkAnswer);
 btnThree.addEventListener('click', checkAnswer);
 btnFour.addEventListener('click', checkAnswer);
+
 
 
 
