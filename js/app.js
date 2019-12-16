@@ -145,24 +145,23 @@ function MakeUserArray(username){
 var userInput = document.getElementById('userInput');
 userInput.addEventListener('submit', handleClick);
 
-///// USER HANDLECLICK EVENT /////
+///// INDEXPAGE: USER HANDLECLICK EVENT TO Store username /////
 function handleClick(event) {
   event.preventDefault();
   var name = event.target.name.value;
   parseLocalStorage();
-  console.log('this is the parsedLocalStorageArray before checking length', parseLocalStorageArray);
+  // console.log('this is the parsedLocalStorageArray before checking length', parseLocalStorageArray);
 
   if (parseLocalStorageArray.length >=1){
     userArray = parseLocalStorageArray;
   }
   new MakeUserArray(name);
-  console.log('this is userArray in home page', userArray);
   saveLocalStorageArray();
 }
 
 //// generate random traits
 
-///// APPEND QUESTIONS TO DOM /////
+///// GAME PAGE: APPEND QUESTIONS TO DOM /////
 var p = document.createElement('p');
 function makeQuestion() {
   p = document.createElement('p');
@@ -170,7 +169,7 @@ function makeQuestion() {
   questionBox.appendChild(p);
 }
 
-///// APPEND BUTTONS TO DOM /////
+///// GAME PAGE: APPEND BUTTONS TO DOM /////
 function makeButton() {
   btnOne = document.createElement('button');
   btnOne.textContent = riddleArray[round].choiceOne;
@@ -189,7 +188,7 @@ function makeButton() {
   buttonBox.appendChild(btnFour);
 }
 
-///// FUNC TO CHECK ANSWERS /////
+///// GAME PAGE: FUNC TO CHECK ANSWERS and add SCORE /////
 function checkAnswer(event) {
   event.preventDefault();
   var button = event.target.textContent;
@@ -208,7 +207,7 @@ function checkAnswer(event) {
     document.getElementById('answer').innerHTML = 'Thats wrong!!'};
 }
 
-///// FUNC TO NEXT QUESTION ////.
+///// GAME PAGE: FUNC TO NEXT QUESTION ////.
 function nextQuestion() {
   hide(answer);
   hide(p);
@@ -229,8 +228,6 @@ function nextQuestion() {
   } else {
     var nextQ = document.getElementById('nextQuestion');
     hide(nextQ);
-    // MakeUserArray.score = score;
-    // userArray.push(MakeUserArray.score);
     saveArray();
     show(answer)
     document.getElementById('answer').innerHTML = `Your score is: ${score}`;
@@ -244,13 +241,18 @@ function nextQuestion() {
 
 
 
-/////// INDEX PAGE Function to create array
+/////// INDEXPAGE: Function to create array
 createRiddleArray();
+
 // createAllergyArray();
 
-/////// GAME PAGE call functions
+/////// GAME PAGE: call functions
 console.log('this is the round number', round);
-// parseLocalStorageArray();
+parseLocalStorage();
+var currentUserIndex = parseLocalStorageArray.length - 1;
+userArray = parseLocalStorageArray;
+var currrentUserScore = userArray[currentUserIndex].score;
+console.log('this is our current user', userArray[currentUserIndex].username, 'this is our current user score', currrentUserScore);
 p.textContent = riddleArray[round].riddle;
 questionBox.appendChild(p);
 hide(nextPage);
