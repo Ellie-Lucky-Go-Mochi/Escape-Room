@@ -1,11 +1,12 @@
 'use scrict';
 ///// GLOBAL ARRAYS /////
 var riddleArray = [];
-var riddleIndexArray = [];
-var allergyArray = [];
-var allergyIndexArray = [];
+// var riddleIndexArray = [];
+// var allergyArray = [];
+// var allergyIndexArray = [];
 var userArray = [];
-var name = '';
+var parseLocalStorageArray = [];
+// var name = '';
 
 var clueArray = ['clue1','clue2','clue3','clue4','clue5','clue6'];
 
@@ -13,7 +14,7 @@ var round = 5;
 var score = 0;
 var clue = 0;
 
-///// CREATE BUTTONS /////
+///// GAME PAGE: CREATE BUTTONS TO ANSWER QUESTIONS /////
 var btnOne = document.createElement('button');
 var btnTwo = document.createElement('button');
 var btnThree = document.createElement('button');
@@ -21,13 +22,11 @@ var btnFour = document.createElement('button');
 var buttonBox = document.getElementById('button-container');
 var nextPage = document.getElementById('nextPage');
 
-///// CREATE QUESTION /////
+///// GAME PAGE: CREATE QUESTION /////
 var questionBox = document.getElementById('question');
 var container = document.getElementById('container');
 
-
-
-///// RANDOM FUNC GENERATOR /////
+///// GAME PAGE: RANDOM FUNC GENERATOR /////
 function randomIndex(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
@@ -42,6 +41,20 @@ function show(elem) {
   elem.style.display = 'block';
 }
 
+///// LOCAL STORAGE FUNCTIONS /////
+// STORE USER//
+function saveLocalStorageArray(){
+  var storeString = JSON.stringify(userArray);
+  localStorage.setItem('currentUser', storeString);
+}
+
+///// GET SCORE /////
+function parseLocalStorage(){
+  var retrieveString = localStorage.getItem('currentUser');
+  parseLocalStorageArray = JSON.parse(retrieveString);
+  console.log('this is the parsed Local Storage Array = ', parseLocalStorageArray);
+  return parseLocalStorageArray;
+}
 
 ///// RIDDLE CONSTRUCTOR /////
 
@@ -96,52 +109,55 @@ function createRiddleArray() {
 ///// create bio traits
 
 // Creating the Allergy trait array
-function Allergy(allergy, eatable, eat, choiceOne, choiceTwo, choiceThree, choiceFour) {
-  this.allergy = allergy;
-  this.eatable = eatable;
-  this.eat = eat;
-  this.choiceOne = choiceOne; ///choice
-  this.choiceTwo = choiceTwo; //choices
-  // this.choiceThree = choiceThree;
-  // this.choiceFour = choiceFour;
-  allergyArray.push(this);
-}
+// function Allergy(allergy, eatable, eat, choiceOne, choiceTwo, choiceThree, choiceFour) {
+//   this.allergy = allergy;
+//   this.eatable = eatable;
+//   this.eat = eat;
+//   this.choiceOne = choiceOne; ///choice
+//   this.choiceTwo = choiceTwo; //choices
+//   // this.choiceThree = choiceThree;
+//   // this.choiceFour = choiceFour;
+//   allergyArray.push(this);
+// }
 
-function createAllergyArray() {
-  new Allergy('shellfish', 'sushi', 'Hell no', 'yes, of course', 'Hell no');
-  new Allergy('peanuts', 'fresh rolls with peanut sauce', 'Hell no', 'yes, of course', 'Hell no');
-  new Allergy('dairy', 'icecream', 'Hell no', 'yes, of course', 'Hell no');
-  new Allergy('soy', 'sushi with sauce on it', 'Hell no', 'yes, of course', 'Hell no');
-  new Allergy('fava beans', 'asparagus and favabean salad', 'Hell no', 'yes, of course', 'Hell no');
-  // new Allergy ('shellfish', 'salmon cookies', 'Y');
-  // new Allergy ('peanuts', 'pecan pie', 'Y');
-  // new Allergy ('dairy', 'vegan pie','Y');
-  // new Allergy ('soy', 'chickpea and rice', 'Y');
-  // new Allergy ('fava beans', 'edamame', 'Y' );
-}
+// function createAllergyArray() {
+//   new Allergy('shellfish', 'sushi', 'Hell no', 'yes, of course', 'Hell no');
+//   new Allergy('peanuts', 'fresh rolls with peanut sauce', 'Hell no', 'yes, of course', 'Hell no');
+//   new Allergy('dairy', 'icecream', 'Hell no', 'yes, of course', 'Hell no');
+//   new Allergy('soy', 'sushi with sauce on it', 'Hell no', 'yes, of course', 'Hell no');
+//   new Allergy('fava beans', 'asparagus and favabean salad', 'Hell no', 'yes, of course', 'Hell no');
+//   // new Allergy ('shellfish', 'salmon cookies', 'Y');
+//   // new Allergy ('peanuts', 'pecan pie', 'Y');
+//   // new Allergy ('dairy', 'vegan pie','Y');
+//   // new Allergy ('soy', 'chickpea and rice', 'Y');
+//   // new Allergy ('fava beans', 'edamame', 'Y' );
+// }
 
 ///// USER CONSTRUCTOR /////
-function MakeUserArray(username, score){
+function MakeUserArray(username){
   this.username = username;
-  this.score = score;
+  this.score = 0;
   userArray.push(this);
 }
 
 
-///// get user name
+///// INDEXPAGE: get user name into local storage
 var userInput = document.getElementById('userInput');
 userInput.addEventListener('submit', handleClick);
 
 ///// USER HANDLECLICK EVENT /////
-
-function handleClick(event){
+function handleClick(event) {
   event.preventDefault();
-  name = event.target.name.value;
-  // return name;
-  MakeUserArray.user = name;
-  userArray.push(MakeUserArray.user);
-  localStorage.setItem('firstUser',JSON.stringify(userArray));
-  // console.log(userArray);
+  var name = event.target.name.value;
+  parseLocalStorage();
+  console.log('this is the parsedLocalStorageArray before checking length', parseLocalStorageArray);
+
+  if (parseLocalStorageArray.length >=1){
+    userArray = parseLocalStorageArray;
+  }
+  new MakeUserArray(name);
+  console.log('this is userArray in home page', userArray);
+  saveLocalStorageArray();
 }
 
 //// generate random traits
@@ -179,7 +195,7 @@ function checkAnswer(event) {
   var button = event.target.textContent;
   console.log(button);
   if (button === riddleArray[round].reply) {
-    show(answer)
+    show(answer);
     document.getElementById('answer').innerHTML = `That's right! ${clueArray[clue]}`;
     clue++
     score += 100;
@@ -188,7 +204,7 @@ function checkAnswer(event) {
   }
   else {
     hide(buttonBox);
-    show(answer)
+    show(answer);
     document.getElementById('answer').innerHTML = 'Thats wrong!!'};
 }
 
@@ -213,8 +229,6 @@ function nextQuestion() {
   } else {
     var nextQ = document.getElementById('nextQuestion');
     hide(nextQ);
-    new MakeUserArray(name,score);
-    localStorage.setItem('gameUser', JSON.stringify(userArray));
     // MakeUserArray.score = score;
     // userArray.push(MakeUserArray.score);
     saveArray();
@@ -228,29 +242,15 @@ function nextQuestion() {
   }
 }
 
-///// STORE SCORE /////
-
-function saveArray(){
-  var scoreString = JSON.stringify(userArray);
-  // var userString = JSON.stringify(username);
-  localStorage.setItem('userScore', scoreString);
-}
-
-///// GET SCORE /////
-function parseScore(){
-  var retrieveScore = localStorage.getItem('userScore');
-  var parsedScore = JSON.parse(retrieveScore);
-  console.log(parsedScore);
-}
 
 
-
-///// Function to create array
+/////// INDEX PAGE Function to create array
 createRiddleArray();
-createAllergyArray();
+// createAllergyArray();
 
-//// call functions
-console.log(round);
+/////// GAME PAGE call functions
+console.log('this is the round number', round);
+// parseLocalStorageArray();
 p.textContent = riddleArray[round].riddle;
 questionBox.appendChild(p);
 hide(nextPage);
