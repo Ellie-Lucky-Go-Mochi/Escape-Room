@@ -24,8 +24,8 @@ var nextPage = document.getElementById('nextPage');
 var answer = document.getElementById('answer');
 
 ///// GAME PAGE: CREATE QUESTION /////
-// var questionBox = document.getElementById('question');
-// var container = document.getElementById('container');
+var questionBox = document.getElementById('question');
+var container = document.getElementById('container');
 
 ///// GAME PAGE: RANDOM FUNC GENERATOR /////
 function randomIndex(max) {
@@ -268,23 +268,23 @@ function nextQuestion() {
 // createAllergyArray();
 
 /////// GAME PAGE: call functions
-// function onGamePageLoad() {
+function onGamePageLoad() {
 // var gamepage = document.getElementById('gamepage');
 // gamepage.setAttribute = (onclick);
 // gamepage.onclick = location.href = 'allyGame.html';
-// console.log('this is the round number', round);
-// retrieveUserArray();
-// p.textContent = riddleArray[round].riddle;
-// questionBox.appendChild(p);
-// hide(nextPage);
-// makeButton();
-// buttonCheckAnswer();
-// // }
+  console.log('this is the round number', round);
+  retrieveUserArray();
+  p.textContent = riddleArray[round].riddle;
+  questionBox.appendChild(p);
+  hide(nextPage);
+  makeButton();
+  buttonCheckAnswer();
+}
 
 /////// INDEXPAGE: Function to create array
-createRiddleArray();
+// createRiddleArray();
 /////// GAME PAGE: gets loaded
-// onGAmePageLoad();
+onGamePageLoad();
 
 
 
