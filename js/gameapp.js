@@ -8,11 +8,8 @@ var randomRiddleIndex = 0;
 var userArray = [];
 var parseLocalStorageArray = [];
 
-var clueArray = ['clue1','clue2','clue3','clue4','clue5','clue6'];
-
 var round = 15;
 var currentUserScore = 0;
-var clue = 0;
 var currentUserIndex = 0;
 
 ///// GAME PAGE: CREATE BUTTONS TO ANSWER QUESTIONS /////
@@ -241,8 +238,7 @@ function checkAnswer(event) {
   console.log(button);
   if (button === riddleArray[randomRiddleIndex].reply) {
     show(answer);
-    document.getElementById('answer').innerHTML = `That's right! ${clueArray[clue]}`;
-    clue++;
+    document.getElementById('answer').innerHTML = 'That is right!';
     currentUserScore += 100;
     console.log('this is the current user Score', userArray[currentUserIndex].username, currentUserScore);
     hide(buttonBox);
