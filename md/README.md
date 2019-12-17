@@ -67,3 +67,11 @@ We created a Virtual Escape Room Game where the user needs to answer clues befor
 [Blood-hand]( https://media.wired.com/photos/5bd262d4b1e96429a704ba17/master/w_2560%2Cc_limit/bloodyhand_top-1036615756.jpg)  
 
 
+### TodDo's 
+        1. add methods and functions
+                a. major functions 
+                b. names and description
+        2. Add purpose to readme ( how to use the app)
+        3. Github Links/Linkedin
+        4. Deployed github pages link
+        5. github projects links
