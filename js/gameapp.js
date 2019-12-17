@@ -148,60 +148,23 @@ function createRiddleArray() {
 //   // new Allergy ('fava beans', 'edamame', 'Y' );
 // }
 
-// ///// INDEXPAGE: USER CONSTRUCTOR /////
-// function MakeUserArray(username){
-//   this.username = username;
-//   this.score = 0;
-//   userArray.push(this);
-// }
-
-
-// ///// INDEXPAGE: get user name into local storage///////
-// var userInput = document.getElementById('userInput');
-// userInput.addEventListener('submit', handleClick);
-
-// ///// INDEXPAGE: USER HANDLECLICK EVENT TO Store username /////
-// function handleClick(event) {
-//   event.preventDefault();
-//   var name = event.target.name.value;
-//   parseLocalStorage();
-
-//   if (parseLocalStorageArray){
-//     userArray = parseLocalStorageArray;
-//   }
-//   new MakeUserArray(name);
-//   saveLocalStorageArray();
-// }
-
 //// generate random riddles/////
 function uniqueRandomNumber () {
-  // for (var j=0; j<6; j++) {
-  randomRiddleIndex = randomIndex(riddleArray.length);
-  return randomRiddleIndex;
-  // while(riddleIndexArray.includes(randomRiddleIndex)){
-  //   randomRiddleIndex = randomIndex(riddleArray.length);
-  // }
-  // riddleIndexArray.push(randomRiddleIndex);
-  // }
-  // if (riddleIndexArray.length === 6) {
-  // riddleIndexArray.shift();
-  // }
-  // console.log('this is the riddleIndexArray', riddleIndexArray);
-  // }
-}
-
-///// GAME PAGE: APPEND QUESTIONS TO DOM /////
-function makeQuestion() {
   randomRiddleIndex = randomIndex(riddleArray.length);
   while(riddleIndexArray.includes(randomRiddleIndex)){
     randomRiddleIndex = randomIndex(riddleArray.length);
   }
   riddleIndexArray.push(randomRiddleIndex);
   console.log('this is the randomRiddleIndex',randomRiddleIndex);
+  return randomRiddleIndex;
+}
+
+///// GAME PAGE: APPEND QUESTIONS TO DOM /////
+function makeQuestion() {
+  uniqueRandomNumber();
   p = document.createElement('p');
   p.textContent = riddleArray[randomRiddleIndex].riddle;
   questionBox.appendChild(p);
-  // }
 }
 
 ///// GAME PAGE: APPEND BUTTONS TO DOM /////
@@ -281,14 +244,11 @@ function nextQuestion() {
   }
 }
 
-
-
-
-
 // createAllergyArray();
 
 /////// GAME PAGE: call functions
 function onGamePageLoad() {
+  createRiddleArray();
   console.log('this is the round number', round);
   retrieveUserArray();
   uniqueRandomNumber();
@@ -299,8 +259,6 @@ function onGamePageLoad() {
   buttonCheckAnswer();
 }
 
-/////// INDEXPAGE: Function to create array
-createRiddleArray();
 /////// GAME PAGE: gets loaded
 onGamePageLoad();
 
