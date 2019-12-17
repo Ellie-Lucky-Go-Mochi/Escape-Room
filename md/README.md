@@ -57,7 +57,7 @@ We created a Virtual Escape Room Game where the user needs to answer clues befor
 ## Resources ##
 [Random Number Generator from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)    
 [Google Fonts](https://fonts.google.com/?category=Display&selection.family=Rammetto+One)  
-??[Chart JS](https://www.chartjs.org/docs/latest/) 
+??[Chart JS](https://www.chartjs.org/docs/latest/)   
 [Timer Function](https://www.geeksforgeeks.org/javascript-timer/  )
 
 ## Image Links ##
