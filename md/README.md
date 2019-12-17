@@ -58,7 +58,9 @@ We created a Virtual Escape Room Game where the user needs to answer clues befor
 [Random Number Generator from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)    
 [Google Fonts](https://fonts.google.com/?category=Display&selection.family=Rammetto+One)  
 ??[Chart JS](https://www.chartjs.org/docs/latest/)   
-[Timer Function](https://www.geeksforgeeks.org/javascript-timer/  )
+[Timer Function](https://www.geeksforgeeks.org/javascript-timer/)  
+[Show/Hide Elements](https://gomakethings.com/how-to-show-and-hide-elements-with-vanilla-javascript/)  
+
 
 ## Image Links ##
 [HomePage-Brick Image](https://unsplash.com/)  
@@ -75,3 +77,10 @@ We created a Virtual Escape Room Game where the user needs to answer clues befor
         3. Github Links/Linkedin
         4. Deployed github pages link
         5. github projects links
+
+
+## Methods ##
+1.   [Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) : Used to review all the users' scores and then arrange them in descending order to list the top scores in the last page.  
+2.   [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) : Used to stringify our UserArray (array of Objects) so that it can be stored in local storage and retrieved with each page load.  
+3.   [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) : Used to parse elements stored in Local Storage.   
+
