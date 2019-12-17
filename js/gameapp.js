@@ -10,7 +10,7 @@ var parseLocalStorageArray = [];
 
 var clueArray = ['clue1','clue2','clue3','clue4','clue5','clue6'];
 
-var round = 5;
+var round = 15;
 var currentUserScore = 0;
 var clue = 0;
 var currentUserIndex = 0;
@@ -113,7 +113,7 @@ function createRiddleArray() {
   new Riddle('If you take off my skin, I will make you cry! What am I?','onion','everyone','KFC','onion','banana');
   new Riddle('What is at the end of a rainbow?','letter w','letter w','gold','puddles','purple');
   new Riddle('What is as light as a feather, but no one can hold it for more than a minute?','breath','feather','toe nail','koala','breath');
-  new Riddle('Which weighs more, a pound of feathers or a pound of bricks?','Neither','feathers','bricks','both','neither');
+  new Riddle('Which weighs more, a pound of feathers or a pound of bricks?','neither','feathers','bricks','both','neither');
   new Riddle('What occurs once in every minute, twice in every moment, yet never in a thousand years?', 'letter m', 'letter m', 'love', 'dogs', 'toilet', 'turkey');
   new Riddle('What has a neck but no head?','bottle','turtles','headless horseman','bottle','snake');
   new Riddle('Voiceless it cries, wingless flutters, toothless bites, mouthless mutters. What am I?','wind','wind','candleflame','fish','wings');
@@ -179,24 +179,27 @@ function createRiddleArray() {
 //// generate random riddles/////
 function uniqueRandomNumber () {
   // for (var j=0; j<6; j++) {
-    randomRiddleIndex = randomIndex(riddleArray.length);
-    return randomRiddleIndex;
-    // while(riddleIndexArray.includes(randomRiddleIndex)){
-    //   randomRiddleIndex = randomIndex(riddleArray.length);
-    // }
-    // riddleIndexArray.push(randomRiddleIndex);
-    // }
-    // if (riddleIndexArray.length === 6) {
-    // riddleIndexArray.shift();
-    // }
-    // console.log('this is the riddleIndexArray', riddleIndexArray);
+  randomRiddleIndex = randomIndex(riddleArray.length);
+  return randomRiddleIndex;
+  // while(riddleIndexArray.includes(randomRiddleIndex)){
+  //   randomRiddleIndex = randomIndex(riddleArray.length);
+  // }
+  // riddleIndexArray.push(randomRiddleIndex);
+  // }
+  // if (riddleIndexArray.length === 6) {
+  // riddleIndexArray.shift();
+  // }
+  // console.log('this is the riddleIndexArray', riddleIndexArray);
   // }
 }
 
 ///// GAME PAGE: APPEND QUESTIONS TO DOM /////
 function makeQuestion() {
-  // uniqueRandomNumber();
   randomRiddleIndex = randomIndex(riddleArray.length);
+  while(riddleIndexArray.includes(randomRiddleIndex)){
+    randomRiddleIndex = randomIndex(riddleArray.length);
+  }
+  riddleIndexArray.push(randomRiddleIndex);
   console.log('this is the randomRiddleIndex',randomRiddleIndex);
   p = document.createElement('p');
   p.textContent = riddleArray[randomRiddleIndex].riddle;
