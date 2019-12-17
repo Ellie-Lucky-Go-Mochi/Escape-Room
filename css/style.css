@@ -96,3 +96,55 @@ input {
 }
 
 /* #questions */
+img{
+    border-radius: 50%;
+  
+   
+}
+
+.image-box{
+
+    width: 50%;
+    height: 50%;
+    text-align: center;
+}
+.image-box > p{
+    border: none;
+    font-family: 'Bree Serif', serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0px;
+   box-shadow: none;
+}
+.all-image > p{
+
+border: none;
+    font-family: 'Bree Serif', serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0px;
+   box-shadow: none;
+}
+
+#second-image{
+  
+}
+#first-image{
+   
+}
+#header{
+    font-size: 80px;
+    text-align: center;
+}
+#all-page{
+    border: solid black;
+    width: 50%;
+    margin-left: 20%;
+    
+}
+ .all-image{
+border: solid black;
+}
+#nextPage{
+    font-size: 30px;
+}
