@@ -4,8 +4,8 @@
 // // var riddleIndexArray = [];
 // // var allergyArray = [];
 // // var allergyIndexArray = [];
-var userArray = [];
-var parseLocalStorageArray = [];
+// var userArray = [];
+// var parseLocalStorageArray = [];
 
 // var clueArray = ['clue1','clue2','clue3','clue4','clue5','clue6'];
 
@@ -50,12 +50,12 @@ function saveLocalStorageArray(){
 }
 
 ///// INDEXPAGE: function LOCALSTORAGE RETRIEVE userArray /////
-function parseLocalStorage(){
-  var retrieveString = localStorage.getItem('currentUser');
-  parseLocalStorageArray = JSON.parse(retrieveString);
-  console.log('this is the parsed Local Storage Array = ', parseLocalStorageArray);
-  return parseLocalStorageArray;
-}
+// function parseLocalStorage(){
+//   var retrieveString = localStorage.getItem('currentUser');
+//   parseLocalStorageArray = JSON.parse(retrieveString);
+//   console.log('this is the parsed Local Storage Array = ', parseLocalStorageArray);
+//   return parseLocalStorageArray;
+// }
 
 ///// GAME PAGE: LOCALSTORAGE retrieve user name and score///
 // function retrieveUserArray () {

@@ -148,30 +148,30 @@ function createRiddleArray() {
 //   // new Allergy ('fava beans', 'edamame', 'Y' );
 // }
 
-///// INDEXPAGE: USER CONSTRUCTOR /////
-function MakeUserArray(username){
-  this.username = username;
-  this.score = 0;
-  userArray.push(this);
-}
+// ///// INDEXPAGE: USER CONSTRUCTOR /////
+// function MakeUserArray(username){
+//   this.username = username;
+//   this.score = 0;
+//   userArray.push(this);
+// }
 
 
 // ///// INDEXPAGE: get user name into local storage///////
 // var userInput = document.getElementById('userInput');
 // userInput.addEventListener('submit', handleClick);
 
-///// INDEXPAGE: USER HANDLECLICK EVENT TO Store username /////
-function handleClick(event) {
-  event.preventDefault();
-  var name = event.target.name.value;
-  parseLocalStorage();
+// ///// INDEXPAGE: USER HANDLECLICK EVENT TO Store username /////
+// function handleClick(event) {
+//   event.preventDefault();
+//   var name = event.target.name.value;
+//   parseLocalStorage();
 
-  if (parseLocalStorageArray){
-    userArray = parseLocalStorageArray;
-  }
-  new MakeUserArray(name);
-  saveLocalStorageArray();
-}
+//   if (parseLocalStorageArray){
+//     userArray = parseLocalStorageArray;
+//   }
+//   new MakeUserArray(name);
+//   saveLocalStorageArray();
+// }
 
 //// generate random traits
 
@@ -269,9 +269,6 @@ function nextQuestion() {
 
 /////// GAME PAGE: call functions
 function onGamePageLoad() {
-// var gamepage = document.getElementById('gamepage');
-// gamepage.setAttribute = (onclick);
-// gamepage.onclick = location.href = 'allyGame.html';
   console.log('this is the round number', round);
   retrieveUserArray();
   p.textContent = riddleArray[round].riddle;
@@ -282,7 +279,7 @@ function onGamePageLoad() {
 }
 
 /////// INDEXPAGE: Function to create array
-// createRiddleArray();
+createRiddleArray();
 /////// GAME PAGE: gets loaded
 onGamePageLoad();
 
