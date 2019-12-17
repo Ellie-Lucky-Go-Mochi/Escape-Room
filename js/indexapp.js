@@ -1,11 +1,11 @@
 'use scrict';
 ///// GLOBAL ARRAYS /////
 // var riddleArray = [];
-// var riddleIndexArray = [];
-// var allergyArray = [];
-// var allergyIndexArray = [];
-var userArray = [];
-var parseLocalStorageArray = [];
+// // var riddleIndexArray = [];
+// // var allergyArray = [];
+// // var allergyIndexArray = [];
+// var userArray = [];
+// var parseLocalStorageArray = [];
 
 // var clueArray = ['clue1','clue2','clue3','clue4','clue5','clue6'];
 
@@ -23,9 +23,9 @@ var parseLocalStorageArray = [];
 // var nextPage = document.getElementById('nextPage');
 // var answer = document.getElementById('answer');
 
-///// GAME PAGE: CREATE QUESTION /////
+// ///// GAME PAGE: CREATE QUESTION /////
 // var questionBox = document.getElementById('question');
-// var container = document.getElementById('container');
+// // var container = document.getElementById('container');
 
 // ///// GAME PAGE: RANDOM FUNC GENERATOR /////
 // function randomIndex(max) {
@@ -50,12 +50,12 @@ function saveLocalStorageArray(){
 }
 
 ///// INDEXPAGE: function LOCALSTORAGE RETRIEVE userArray /////
-function parseLocalStorage(){
-  var retrieveString = localStorage.getItem('currentUser');
-  parseLocalStorageArray = JSON.parse(retrieveString);
-  console.log('this is the parsed Local Storage Array = ', parseLocalStorageArray);
-  return parseLocalStorageArray;
-}
+// function parseLocalStorage(){
+//   var retrieveString = localStorage.getItem('currentUser');
+//   parseLocalStorageArray = JSON.parse(retrieveString);
+//   console.log('this is the parsed Local Storage Array = ', parseLocalStorageArray);
+//   return parseLocalStorageArray;
+// }
 
 ///// GAME PAGE: LOCALSTORAGE retrieve user name and score///
 // function retrieveUserArray () {
@@ -156,26 +156,26 @@ function MakeUserArray(username){
 }
 
 
-// ///// INDEXPAGE: get user name into local storage///////
-// var userInput = document.getElementById('userInput');
-// userInput.addEventListener('submit', handleClick);
+///// INDEXPAGE: get user name into local storage///////
+var userInput = document.getElementById('userInput');
+userInput.addEventListener('submit', handleClick);
 
-// ///// INDEXPAGE: USER HANDLECLICK EVENT TO Store username /////
-// function handleClick(event) {
-//   event.preventDefault();
-//   var name = event.target.name.value;
-//   parseLocalStorage();
+///// INDEXPAGE: USER HANDLECLICK EVENT TO Store username /////
+function handleClick(event) {
+  event.preventDefault();
+  var name = event.target.name.value;
+  parseLocalStorage();
 
-//   if (parseLocalStorageArray){
-//     userArray = parseLocalStorageArray;
-//   }
-//   new MakeUserArray(name);
-//   saveLocalStorageArray();
-// }
+  if (parseLocalStorageArray){
+    userArray = parseLocalStorageArray;
+  }
+  new MakeUserArray(name);
+  saveLocalStorageArray();
+}
 
 //// generate random traits
 
-///// GAME PAGE: APPEND QUESTIONS TO DOM /////
+// ///// GAME PAGE: APPEND QUESTIONS TO DOM /////
 // var p = document.createElement('p');
 // function makeQuestion() {
 //   p = document.createElement('p');
