@@ -59,7 +59,8 @@ We created a Virtual Escape Room Game where the user needs to answer clues befor
 [Google Fonts](https://fonts.google.com/?category=Display&selection.family=Rammetto+One)  
 ??[Chart JS](https://www.chartjs.org/docs/latest/)   
 [Timer Function](https://www.geeksforgeeks.org/javascript-timer/)  
-[Show/Hide Elements](https://gomakethings.com/how-to-show-and-hide-elements-with-vanilla-javascript/)  
+[Show/Hide Elements](https://gomakethings.com/how-to-show-and-hide-elements-with-vanilla-javascript/) 
+[Rain effect](https://github.com/bikkimahato/HTML-CSS-Projects/tree/master/RainAnimation) 
 
 
 ## Image Links ##
@@ -67,6 +68,8 @@ We created a Virtual Escape Room Game where the user needs to answer clues befor
 [GamePage-Brick Image](https://unsplash.com/)  
 [Blood-splash](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlYvyNujTDMFpxcN6xzhcmHbil44f3ilcbK8CSVN_Kjp3ALhJJJg&s)  
 [Blood-hand]( https://media.wired.com/photos/5bd262d4b1e96429a704ba17/master/w_2560%2Cc_limit/bloodyhand_top-1036615756.jpg)  
+[home.html-background image](https://get.wallhere.com/photo/night-Moon-moonlight-swamp-house-haunted-digital-art-1149294.jpg)
+[home.html-rain effect](https://github.com/bikkimahato/HTML-CSS-Projects/tree/master/RainAnimation)
 
 
 ### TodDo's 
