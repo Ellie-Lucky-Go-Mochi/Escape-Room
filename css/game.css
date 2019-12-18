@@ -3,7 +3,7 @@ body {
     margin: auto;
     max-width: 800px;
     /* background-image: url(/img/brick2.jpg); */
-    background-image: url(/img/room.jpg);
+    background-image: url(../img/room.jpg);
     background-position: center;
     background-size: 150%;
     color: white;

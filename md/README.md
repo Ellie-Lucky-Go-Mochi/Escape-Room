@@ -69,7 +69,7 @@ Use `live-server` from index.html and from the deployed website: https://ellie-l
         a. when a question is answered user moves onto next question
 
 
-## Wire Frame ##
+## Wire Frame Ideas ##
 ![wireframe](/img/WireFrame.jpg)
 
 ## Domain Model ##

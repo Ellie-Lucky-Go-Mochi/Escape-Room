@@ -8,7 +8,7 @@ body {
 }
 .rain {
     height: 100vh;
-    background: url(/img/rain.png);
+    background: url(../img/rain.png);
     animation: animateRain .3s linear infinite;
     z-index: -1;
 }
