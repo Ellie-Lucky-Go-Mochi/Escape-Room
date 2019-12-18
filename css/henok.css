@@ -40,13 +40,11 @@ img{
 }
 #all-page{
   border: solid black;
-  width: 50%;
+  width: 70%;
   margin-left: 20%;
   
 }
-.all-image{
 
-}
 #nextPage{
   font-size: 30px;
 }
@@ -60,4 +58,21 @@ img{
   text-decoration: underline white;
   color: blue;
   
+}
+#fourth-image{
+  margin-top: 10px;
+}
+#second-image{
+
+  position: absolute;
+  margin-left: 40%;
+  margin-top: -15%;
+
+}
+#fourth-image{
+ 
+ margin-left: 100%;
+}  
+#second-column{
+  border: solid white;
 }
