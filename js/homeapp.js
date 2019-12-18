@@ -42,7 +42,7 @@ userInput.addEventListener('submit', handleClick);
 ///// INDEXPAGE: USER HANDLECLICK EVENT TO Store username /////
 function handleClick(event) {
   event.preventDefault();
-  location.replace("./allyGame.html");
+  location.replace("../html/Game.html");
   var name = event.target.name.value;
   parseLocalStorage();
 
