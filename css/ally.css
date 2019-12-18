@@ -35,11 +35,10 @@ img {
 }
 
 button:hover {
-box-shadow: 0 0 20px rgb(250, 13, 13);
-background-color: black;
-color: rgb(240, 214, 214);
-transition-duration: 0.4s
-
+  box-shadow: 0 0 20px rgb(250, 13, 13);
+  background-color: black;
+  color: rgb(240, 214, 214);
+  transition-duration: 0.4s;
 }
 
 button {

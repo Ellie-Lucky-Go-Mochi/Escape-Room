@@ -1,8 +1,8 @@
 'use scrict';
 ///// GLOBAL ARRAYS /////
-var ageArray = [];
-var ageIndexArray = [];
-var randomAgeIndex = 0;
+// var ageArray = [];
+// var ageIndexArray = [];
+// var randomAgeIndex = 0;
 var riddleArray = [];
 var riddleIndexArray = [];
 var randomRiddleIndex = 0;
@@ -12,7 +12,7 @@ var randomRiddleIndex = 0;
 var userArray = [];
 var parseLocalStorageArray = [];
 
-var round = 2;
+var round = 10;
 var currentUserScore = 0;
 var currentUserIndex = 0;
 
@@ -75,59 +75,59 @@ function retrieveUserArray() {
   }
 }
 
-// Creating the Age trait array
-function Age(age, reply, choiceOne, choiceTwo) {
-  this.age = age;
-  this.reply = reply;
-  this.choiceOne = choiceOne; ///choice
-  this.choiceTwo = choiceTwo; //choices
-  // this.indexArray = [];
-  ageArray.push(this);
-}
+// // Creating the Age trait array
+// function Age(age, reply, choiceOne, choiceTwo) {
+//   this.age = age;
+//   this.reply = reply;
+//   this.choiceOne = choiceOne; ///choice
+//   this.choiceTwo = choiceTwo; //choices
+//   // this.indexArray = [];
+//   ageArray.push(this);
+// }
 
-function createAgeArray() {
-  new Age(16, 'N', 'Y', 'N');
-  new Age(20, 'N', 'Y', 'N');
-  new Age(25, 'Y', 'Y', 'N');
-  new Age(40, 'Y', 'Y', 'N');
-  new Age(55, 'Y', 'Y', 'N');
-  new Age(80, 'Y', 'Y', 'N');
-}
-/////// CREATING THE FIRST AGE QUESTION///
-function createAgeQuestion() {
-  randomAgeIndex = randomIndex(ageArray.length);
-  displayBio(ageArray[randomAgeIndex].age);
-  makeAgeQuestion();
-  makeAgeButton();
-  buttonAgeCheckAnswer();
-}
-///// create Age question////////
-function displayBio(age) {
-  console.log(`you are a ${age} year old and have stumbled up a beaten down house with a big red metal door. At first you are hesistant to go in, but you notice that it is {weather} outside. Upon entering, you recall someone before saying you are hangry, so you reach into your backpack and pull out a candy bar to munch on. Unfortunately you notice it contains {allergy} which you are deathly allergic to. after tossing the death bar, you turn to leave rather than starve in a building and notice the door is shut and bolted locked and electrified. you now have to find a way out.....   `);
+// function createAgeArray() {
+//   new Age(16, 'N', 'Y', 'N');
+//   new Age(20, 'N', 'Y', 'N');
+//   new Age(25, 'Y', 'Y', 'N');
+//   new Age(40, 'Y', 'Y', 'N');
+//   new Age(55, 'Y', 'Y', 'N');
+//   new Age(80, 'Y', 'Y', 'N');
+// }
+// /////// CREATING THE FIRST AGE QUESTION///
+// function createAgeQuestion() {
+//   randomAgeIndex = randomIndex(ageArray.length);
+//   displayBio(ageArray[randomAgeIndex].age);
+//   makeAgeQuestion();
+//   makeAgeButton();
+//   buttonAgeCheckAnswer();
+// }
+// ///// create Age question////////
+// function displayBio(age) {
+//   console.log(`you are a ${age} year old and have stumbled up a beaten down house with a big red metal door. At first you are hesistant to go in, but you notice that it is {weather} outside. Upon entering, you recall someone before saying you are hangry, so you reach into your backpack and pull out a candy bar to munch on. Unfortunately you notice it contains {allergy} which you are deathly allergic to. after tossing the death bar, you turn to leave rather than starve in a building and notice the door is shut and bolted locked and electrified. you now have to find a way out.....   `);
 
-}
-////////// create Age question///
-function makeAgeQuestion() {
-  // uniqueRandomNumber();
-  p = document.createElement('p');
-  p.textContent = 'You see a can of beer. It looks fresh and chilled. No one is watching. What the heck? Just drink it'; questionBox.appendChild(p);
-}
+// }
+// ////////// create Age question///
+// function makeAgeQuestion() {
+//   // uniqueRandomNumber();
+//   p = document.createElement('p');
+//   p.textContent = 'You see a can of beer. It looks fresh and chilled. No one is watching. What the heck? Just drink it'; questionBox.appendChild(p);
+// }
 
-///// GAME PAGE: MAKE AGE BUTTONS TO DOM /////
-function makeAgeButton() {
-  btnOne = document.createElement('button');
-  btnOne.textContent = ageArray[randomAgeIndex].choiceOne;
-  buttonBox.appendChild(btnOne);
+// ///// GAME PAGE: MAKE AGE BUTTONS TO DOM /////
+// function makeAgeButton() {
+//   btnOne = document.createElement('button');
+//   btnOne.textContent = ageArray[randomAgeIndex].choiceOne;
+//   buttonBox.appendChild(btnOne);
 
-  btnTwo = document.createElement('button');
-  btnTwo.textContent = ageArray[randomAgeIndex].choiceTwo;
-  buttonBox.appendChild(btnTwo);
-}
-//////// GAME PAGE: MAKE AGE BUTTONS TO DOM///////////
-function buttonAgeCheckAnswer() {
-  btnOne.addEventListener('click', checkAgeAnswer);
-  btnTwo.addEventListener('click', checkAgeAnswer);
-}
+//   btnTwo = document.createElement('button');
+//   btnTwo.textContent = ageArray[randomAgeIndex].choiceTwo;
+//   buttonBox.appendChild(btnTwo);
+// }
+// //////// GAME PAGE: MAKE AGE BUTTONS TO DOM///////////
+// function buttonAgeCheckAnswer() {
+//   btnOne.addEventListener('click', checkAgeAnswer);
+//   btnTwo.addEventListener('click', checkAgeAnswer);
+// }
 ///// GAME PAGE: FUNC TO CHECK AGE ANSWERS and add SCORE /////
 function checkAgeAnswer(event) {
   event.preventDefault();
@@ -325,11 +325,11 @@ function nextQuestion() {
 
 /////// GAME PAGE: call functions
 function onGamePageLoad() {
-  createAgeArray();
+  // createAgeArray();
   createRiddleArray();
   console.log('this is the round number', round);
   retrieveUserArray();
-  createAgeQuestion();
+  // createAgeQuestion();
   uniqueRandomNumber();
   p.textContent = riddleArray[randomRiddleIndex].riddle;
   questionBox.appendChild(p);
