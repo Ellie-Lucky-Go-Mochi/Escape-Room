@@ -1,11 +1,29 @@
 # Escape-Room
-We created a Virtual Escape Room Game where the user needs to answer clues before the room blows up. 
+
+## Purpose ##  
+This game allows the user to have a virtual escape room experience. The user will need to go through the presented riddles in order to escape/pass the game.
 
 **Project Members**
 1. Ally  
+[Linkedin](https://www.linkedin.com/in/allyson-reyes/)  
+[GitHub](https://github.com/areyes986)
 2. Henok  
+[Linkedin](https://www.linkedin.com/in/henok-gebremedhn-626a4b153/)  
+[GitHub](https://github.com/henok-6411)
 3. Vij  
+[Linkedin](https://www.linkedin.com/in/vijayetarangarajan/)  
+[GitHub](https://github.com/vijayetar)
+
 4. Brendon  
+[Linkedin](https://www.linkedin.com/in/brendon-hampton-37132899/)  
+[GitHub](https://github.com/BrendonLH)
+
+## How to Run this Game ##
+From the terminal `open index.html` from root of the project.
+​
+OR 
+​
+`live-server` from the root of the project
 
 ## User Stories
 
@@ -23,28 +41,28 @@ We created a Virtual Escape Room Game where the user needs to answer clues befor
 **Acceptance Tests**  
         a. the game stops at end of time constraint
 
-
 ### 3. As a User...I want to be able to see the top scores of all the users(medium). ###
-**Feature Tasks**
-        a. display end score for user
-        b. display all top scores at the beginning(optional) and end.   
-**Acceptance Tests**
+
+**Feature Tasks**   
+        a. display end score for user  
+        b. display all top scores at the beginning(optional) and end.    
+**Acceptance Tests**  
         a. final top user scores update with new top user score
 
 
 ### 4. As a User...I want to be a random character with a unique Bio(medium). ###
 
-**Feature Tasks**
+**Feature Tasks**  
         a. Generate random character traits  
-**Acceptance Tests**
+**Acceptance Tests**  
         a. no consecutive two duplicates of characters
         
 
 ### 5. As a User...I want to be rewarded for completing a challenge(medium) ###
 
-**Feature Tasks**
-        a. User will progress through questions as questions are correctly answered.
-**Acceptance Tests**
+**Feature Tasks**  
+        a. User will progress through questions as questions are correctly answered.  
+**Acceptance Tests**  
         a. when a question is answered user moves onto next question
 
 
