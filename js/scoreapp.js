@@ -57,7 +57,14 @@ function displayHeader(){
 }
 
 function displayTopUsers(){
-  for (var i = 0; i<5; i++){
+  var toplist = userArray.length;
+  if (toplist > 5){
+    toplist = 5;
+  } 
+  else {
+    toplist = userArray.length;
+  } 
+  for (var i = 0; i<toplist; i++){
     tbrow = document.createElement('tr');
     var tdEl = document.createElement('td');
     tdEl.textContent = userArray[i].username;

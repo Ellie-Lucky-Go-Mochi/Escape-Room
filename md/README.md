@@ -19,7 +19,7 @@ This game allows the user to have a virtual escape room experience. The user wil
 [GitHub](https://github.com/BrendonLH)
 
 ## How to Run this Game ##
-Use `live-server` from allyIndex.html.
+Use `live-server` from Home.html.
 ​
 
 ## User Stories
@@ -93,14 +93,14 @@ Use `live-server` from allyIndex.html.
 
 
 
-### TodDo's 
-        1. add methods and functions
-                a. major functions 
-                b. names and description
-        2. Add purpose to readme ( how to use the app)
-        3. Github Links/Linkedin
-        4. Deployed github pages link
-        5. github projects links
+### TodDo's ###
+1. add methods and functions  
+        a. major functions   
+        b. names and description  
+2. Add purpose to readme ( how to use the app)  
+~~3. Github Links/Linkedin~~  
+4. Deployed github pages link  
+~~5. github projects links~~  
 
 
 ## Methods ##
@@ -108,3 +108,5 @@ Use `live-server` from allyIndex.html.
 2.   [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) : Used to stringify our UserArray (array of Objects) so that it can be stored in local storage and retrieved with each page load.  
 3.   [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) : Used to parse elements stored in Local Storage.   
 
+### GitHub Project Links ###
+We used our Github [Project](https://github.com/Ellie-Lucky-Go-Mochi/Escape-Room/projects) links to follow our to-do list and complete our tasks.
