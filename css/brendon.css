@@ -1,26 +1,79 @@
 body {
-    text-align: center;
-    margin: auto;
-    margin-top: 10%;
+    margin: 0;
+    padding: 0;
     color: white;
-    background-image: url(/img/brick2.jpg);
-    max-width: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Creepster', cursive;
 }
-button {
-    font-size:large;
-    opacity: .6;
-    margin: 5%;
-    background-color: white;
-    border-radius: 30% 60% 70% 90%;
-    border-color: greenyellow;
-    transition-duration: 0.4s;
+.rain {
+    height: 100vh;
+    background: url(/img/rain.png);
+    animation: animateRain .3s linear infinite;
 }
-button:hover {
-    background-color: #4CAF50; /* Green */
-    color: white;
+.rain::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background:#fff;
+    animation: lightening 4s infinite;
+    opacity: 0;
 }
 
-h3 {
-    font-size: 1.5em;
-    font-style: oblique;
+@keyframes animateRain {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 20% 100%;
+    }
 }
+@keyframes lightening
+{
+    0%
+    {opacity: 0;}
+    10%
+    {opacity: 0;}
+    11%
+    {opacity: 1;}
+    14%
+    {opacity: 0;}
+    20%
+    {opacity: 0;}
+    21%
+    {opacity: 1;}
+    24%
+    {opacity: 0;}
+    104%
+    {opacity: 1;} 
+}
+ h1 {
+     font-size: 3.5em;
+ }
+ .userBox {
+    text-shadow: 0px 0px 15px rgb(235, 16, 16);
+ }
+ input {
+     color: honeydew;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Creepster', cursive;
+    margin: 3%;
+    background-color: rgba(223, 241, 195, 0.014);
+    border-radius: 40% 40% 20% 20%;
+}
+fieldset {
+    margin-top: 5%;
+}
+input[type=submit] {
+    border: none;
+    text-shadow: 0px 0px 15px rgb(235, 16, 16);
+  }
+  input[type=text] {
+    border: none;
+    background-color: rgba(255, 0, 0, 0.116);
+  }
+
+
+
