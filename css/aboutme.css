@@ -2,6 +2,74 @@
 body {
   text-align: center;
 }
+#all-page{
+  height: 80%;
+}
+
+
+img{
+  border-radius: 50%;
+}
+
+.image-box{
+
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+.image-box > p{
+  
+  font-family: 'Bree Serif', serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0px;
+ box-shadow: none;
+}
+.all-image > p{
+
+
+  font-family: 'Bree Serif', serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0px;
+ /* box-shadow: none; */
+ color: white;
+}
+
+#header{
+  font-size: 80px;
+  text-align: center;
+  color: white;
+}
+#all-page{
+  border: solid white;
+  width: 50%;
+  height: 50%;
+  margin-left: 20%;
+  
+}
+.all-image{
+
+}
+#nextPage{
+  font-size: 30px;
+}
+#about-me{
+  background: #333333;
+}
+.all-image > a{
+  color:white;
+}
+#image-box > a:hover{
+  text-decoration: underline white;
+  color: blue;
+  
+}
+
+
+body {
+  text-align: center;
+}
 
 
 img{
@@ -40,13 +108,11 @@ img{
 }
 #all-page{
   border: solid black;
-  width: 50%;
+  width: 70%;
   margin-left: 20%;
   
 }
-.all-image{
 
-}
 #nextPage{
   font-size: 30px;
 }
@@ -60,4 +126,27 @@ img{
   text-decoration: underline white;
   color: blue;
   
+}
+#fourth-image{
+  margin-top: 10px;
+}
+
+
+
+#fourth-image{
+ 
+ margin-left: 100%;
+}  
+#first-image,#second-image{
+  width: 40%;
+  padding: 10%;
+  margin-left: 40%;
+}
+#third-image{
+  border: solid white;
+  margin-bottom:40%;
+}
+#fourth-column{
+  margin-top: 40%;
+  border: solid red;
 }
