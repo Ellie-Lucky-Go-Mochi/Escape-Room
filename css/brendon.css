@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    font-family: 'Creepster', cursive;
 }
 .rain {
     height: 100vh;
@@ -29,6 +30,34 @@ body {
         background-position: 20% 100%;
     }
 }
+ h1 {
+     font-size: 3.5em;
+ }
+ .userBox {
+    position: relative;
+    top: 20%;
+    text-shadow: 0px 0px 15px rgb(235, 16, 16);
+ }
+ input {
+     color: honeydew;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Creepster', cursive;
+    margin: 3%;
+    background-color: rgba(223, 241, 195, 0.014);
+    border-radius: 40% 40% 20% 20%;
+}
+fieldset {
+    margin-top: 5%;
+}
+input[type=submit] {
+    border: none;
+    text-shadow: 0px 0px 15px rgb(235, 16, 16);
+  }
+  input[type=text] {
+    border: none;
+    background-color: rgba(255, 0, 0, 0.116);
+  }
 
 
 
