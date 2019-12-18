@@ -10,6 +10,7 @@ body {
     height: 100vh;
     background: url(/img/rain.png);
     animation: animateRain .3s linear infinite;
+    z-index: -1;
 }
 .rain::before {
     content: '';
@@ -19,6 +20,7 @@ body {
     background:#fff;
     animation: lightening 4s infinite;
     opacity: 0;
+    z-index: -1;
 }
 
 @keyframes animateRain {
@@ -53,6 +55,8 @@ body {
  }
  .userBox {
     text-shadow: 0px 0px 15px rgb(235, 16, 16);
+    margin: auto;
+    text-align: center;
  }
  input {
      color: honeydew;
