@@ -6,8 +6,6 @@ body {
 
 img{
   border-radius: 50%;
-
- 
 }
 
 .image-box{
@@ -17,7 +15,7 @@ img{
   text-align: center;
 }
 .image-box > p{
-  border: none;
+  
   font-family: 'Bree Serif', serif;
   font-size: 15px;
   margin: 0;
@@ -26,7 +24,7 @@ img{
 }
 .all-image > p{
 
-border: none;
+
   font-family: 'Bree Serif', serif;
   font-size: 15px;
   margin: 0;
@@ -47,7 +45,7 @@ border: none;
   
 }
 .all-image{
-border: solid black;
+
 }
 #nextPage{
   font-size: 30px;
@@ -58,6 +56,8 @@ border: solid black;
 .all-image > a{
   color:white;
 }
-a:hover{
+#image-box > a:hover{
+  text-decoration: underline white;
+  color: blue;
   
 }
