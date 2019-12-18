@@ -3,7 +3,7 @@
 ## Purpose ##  
 This game allows the user to have a virtual escape room experience. The user will need to go through the presented riddles in order to escape/pass the game.
 
-**Project Members**
+## Project Members ##
 1. Ally  
 [Linkedin](https://www.linkedin.com/in/allyson-reyes/)  
 [GitHub](https://github.com/areyes986)
@@ -19,11 +19,8 @@ This game allows the user to have a virtual escape room experience. The user wil
 [GitHub](https://github.com/BrendonLH)
 
 ## How to Run this Game ##
-From the terminal `open index.html` from root of the project.
+Use `live-server` from allyIndex.html.
 ​
-OR 
-​
-`live-server` from the root of the project
 
 ## User Stories
 
@@ -78,7 +75,9 @@ OR
 ??[Chart JS](https://www.chartjs.org/docs/latest/)   
 [Timer Function](https://www.geeksforgeeks.org/javascript-timer/)  
 [Show/Hide Elements](https://gomakethings.com/how-to-show-and-hide-elements-with-vanilla-javascript/) 
-[Rain effect](https://github.com/bikkimahato/HTML-CSS-Projects/tree/master/RainAnimation) 
+[Rain effect](https://github.com/bikkimahato/HTML-CSS-Projects/tree/master/RainAnimation)  
+[Creepy Sound Effect](http://soundbible.com/2165-Creepy-Background.html)  
+[Remove Background Image](https://www.remove.bg/upload)  
 
 
 ## Image Links ##
@@ -86,8 +85,11 @@ OR
 [GamePage-Brick Image](https://unsplash.com/)  
 [Blood-splash](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlYvyNujTDMFpxcN6xzhcmHbil44f3ilcbK8CSVN_Kjp3ALhJJJg&s)  
 [Blood-hand]( https://media.wired.com/photos/5bd262d4b1e96429a704ba17/master/w_2560%2Cc_limit/bloodyhand_top-1036615756.jpg)  
-[home.html-background image](https://get.wallhere.com/photo/night-Moon-moonlight-swamp-house-haunted-digital-art-1149294.jpg)
-[home.html-rain effect](https://github.com/bikkimahato/HTML-CSS-Projects/tree/master/RainAnimation)
+[Background Image for Home Page](https://get.wallhere.com/photo/night-Moon-moonlight-swamp-house-haunted-digital-art-1149294.jpg)  
+[Rain Effect on Home page](https://github.com/bikkimahato/HTML-CSS-Projects/tree/master/RainAnimation)  
+[Background Image for Game Page](https://unsplash.com/photos/GhxWry42_zQ)  
+[Spooky Lady used for Game Page](https://unsplash.com/photos/60jofh7Vti0)  
+
 
 
 ### TodDo's 
