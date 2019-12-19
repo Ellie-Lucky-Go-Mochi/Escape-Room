@@ -1,22 +1,14 @@
 
-body {
-  text-align: center;
-}
-#all-page{
-  height: 80%;
-}
-
-
 img{
   border-radius: 50%;
 }
-
+/* 
 .image-box{
 
   width: 50%;
   height: 50%;
   text-align: center;
-}
+} */
 .image-box > p{
   
   font-family: 'Bree Serif', serif;
@@ -36,26 +28,22 @@ img{
  color: white;
 }
 
-#header{
-  font-size: 80px;
-  text-align: center;
-  color: white;
-}
 #all-page{
+ 
+  width: 50%;
+ 
+  margin-left: 20%;
+  
+} 
+
+#nextPage{
+  font-size: 30px;
+}
+#about-me{
+  background:black;
   border: solid white;
-  width: 50%;
   height: 50%;
-  margin-left: 20%;
   
-}
-.all-image{
-
-}
-#nextPage{
-  font-size: 30px;
-}
-#about-me{
-  background: #333333;
 }
 .all-image > a{
   color:white;
@@ -65,12 +53,6 @@ img{
   color: blue;
   
 }
-
-
-body {
-  text-align: center;
-}
-
 
 img{
   border-radius: 50%;
@@ -102,51 +84,62 @@ img{
 }
 
 #header{
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
   color: white;
 }
 #all-page{
-  border: solid black;
-  width: 70%;
-  margin-left: 20%;
   
+  vertical-align: left;
+ 
 }
 
 #nextPage{
   font-size: 30px;
 }
 #about-me{
-  background: #333333;
+  background: black;
 }
 .all-image > a{
   color:white;
 }
 #image-box > a:hover{
   text-decoration: underline white;
-  color: blue;
+
   
 }
 #fourth-image{
   margin-top: 10px;
 }
-
-
-
-#fourth-image{
- 
- margin-left: 100%;
-}  
-#first-image,#second-image{
-  width: 40%;
-  padding: 10%;
-  margin-left: 40%;
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  margin-left: 5%;
 }
-#third-image{
-  border: solid white;
-  margin-bottom:40%;
+.fa-github{
+  margin-left: 5%; 
+}
+/* #parag1{
+  margin-bottom:50% ;
+margin: auto;
+text-align: center;
+color: white;
+} */
+#first-column{
+  margin-top: 4%;
+  margin-left: 10%;
+}
+#second-column{
+  margin-top: 4%;
+  margin-left: 10%;
+}
+#third-column{
+  margin-top:4%;
+  margin-left: 10%;
 }
 #fourth-column{
-  margin-top: 40%;
-  border: solid red;
+  margin-top: 4%;
+  margin-left: 10%;
 }
+
+
