@@ -84,6 +84,7 @@ img{
 }
 
 #header{
+  font-family: 'Creepster', cursive;
   font-size: 60px;
   text-align: center;
   color: white;
@@ -93,7 +94,9 @@ img{
   vertical-align: left;
  
 }
-
+#nextPage:hover{
+  color: green;
+}
 #nextPage{
   font-size: 30px;
 }
@@ -115,8 +118,10 @@ img{
   background: #007bb5;
   color: white;
   margin-left: 5%;
+  margin-top: 1%;
 }
 .fa-github{
+  margin-top: 1%;
   margin-left: 5%; 
 }
 /* #parag1{
@@ -141,5 +146,4 @@ color: white;
   margin-top: 4%;
   margin-left: 10%;
 }
-
 
