@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Creepster', cursive;
+    font-size: 200%;
 }
 .rain {
     height: 100vh;
@@ -52,9 +53,10 @@ body {
 }
  h1 {
      font-size: 3.5em;
+     padding-top: 5%;
  }
  .userBox {
-    text-shadow: 0px 0px 15px rgb(235, 16, 16);
+    text-shadow: 0px 0px 15px rgb(0, 250, 54);
     margin: auto;
     text-align: center;
  }
@@ -72,12 +74,22 @@ fieldset {
 }
 input[type=submit] {
     border: none;
-    text-shadow: 0px 0px 15px rgb(235, 16, 16);
+    text-shadow: 0px 0px 15px rgb(22, 252, 2);
+    outline: none;
+    font-size: 1em;
   }
+  
   input[type=text] {
     border: none;
-    background-color: rgba(255, 0, 0, 0.116);
+    background-color: rgba(0, 255, 34, 0.473);
+    text-align: center;
+    outline: none;
+    font-size: 1em;
   }
 
+  input:hover {
+    box-shadow: 0 0 20px rgb(250, 13, 13);
+    transition-duration: .3s;
+  }
 
 
