@@ -1,48 +1,20 @@
 
 img{
   border-radius: 50%;
-}
-/* 
-.image-box{
-
-  width: 50%;
-  height: 50%;
-  text-align: center;
-} */
-.image-box > p{
+  float: left;
   
-  font-family: 'Bree Serif', serif;
-  font-size: 15px;
-  margin: 0;
-  padding: 0px;
- box-shadow: none;
-}
-.all-image > p{
-
-
-  font-family: 'Bree Serif', serif;
-  font-size: 15px;
-  margin: 0;
-  padding: 0px;
- /* box-shadow: none; */
- color: white;
-}
-
-#all-page{
  
-  width: 50%;
- 
-  margin-left: 20%;
-  
-} 
+}
 
 #nextPage{
   font-size: 30px;
+  float:right;
 }
 #about-me{
   background:black;
-  border: solid white;
-  height: 50%;
+ 
+  width: 70%;
+  margin-left: 20%;
   
 }
 .all-image > a{
@@ -53,15 +25,10 @@ img{
   color: blue;
   
 }
-
-img{
-  border-radius: 50%;
-}
-
 .image-box{
 
   width: 50%;
-  height: 50%;
+
   text-align: center;
 }
 .image-box > p{
@@ -79,7 +46,6 @@ img{
   font-size: 15px;
   margin: 0;
   padding: 0px;
- /* box-shadow: none; */
  color: white;
 }
 
@@ -90,7 +56,7 @@ img{
   color: white;
 }
 #all-page{
-  
+ 
   vertical-align: left;
  
 }
@@ -102,6 +68,7 @@ img{
 }
 #about-me{
   background: black;
+ 
 }
 .all-image > a{
   color:white;
@@ -117,19 +84,9 @@ img{
 .fa-linkedin {
   background: #007bb5;
   color: white;
-  margin-left: 5%;
-  margin-top: 1%;
+  margin-left: 3%;
 }
-.fa-github{
-  margin-top: 1%;
-  margin-left: 5%; 
-}
-/* #parag1{
-  margin-bottom:50% ;
-margin: auto;
-text-align: center;
-color: white;
-} */
+
 #first-column{
   margin-top: 4%;
   margin-left: 10%;
@@ -145,5 +102,6 @@ color: white;
 #fourth-column{
   margin-top: 4%;
   margin-left: 10%;
+  margin-top: 5%;
 }
 
