@@ -85,6 +85,7 @@ Use `live-server` from index.html and from the deployed website: https://ellie-l
 [Creepy Sound Effect](http://soundbible.com/2165-Creepy-Background.html)  
 [Remove Background Image](https://www.remove.bg/upload)  
 [Thunder Sound Effect-Home page](http://soundbible.com/2053-Thunder-Sound-FX.html)
+[silence.mp3-to fix index.html audio loop](https://stackoverflow.com/questions/50490304/how-to-make-audio-autoplay-on-chrome)
 
 
 ## Image Links ##
@@ -114,10 +115,23 @@ Use `live-server` from index.html and from the deployed website: https://ellie-l
         a. creates the MakeUserArray object each time a user plays the game by inserting the variable username. 
         b. the user is then assigned a property name (username) and property score (score) and stored in an array userArray.
         c. This is only used in the index.html page load.
-1. Local Storage:  
+2. Local Storage:  
         a. function saveLocalStorageArray() : will save userArray to local storage using the stringify method (also described later) with the key 'current user'.
         b. function parseLocalStorageArray = retrieves the userArray with the key 'current user'.
-        c. It is used in all three game html pages - index.html, Game.html, scoreBoard.html.  
+        c. It is used in all three game html pages - index.html, Game.html, scoreBoard.html. 
+3. Riddles: 
+        a. createRiddleArray
+                1. (new.Riddle) creates all the riddles to be used later with random riddle function.
+                2. dependent on the riddle function constructor
+        b. function Riddle
+                1. constructs the riddle.
+                2. has four choice answers that compare to the right answer.
+                3. createRiddleArray is dependent on this.
+4. Questions Loop through: 
+        a. function nextQuestion()
+                1. hides and shows each question and 4 answer buttons.
+                2. checks answer to determine correct or incorrect.
+                3. decrements round until 0 then displays userscore.
 
 
 ## Methods ##
