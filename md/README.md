@@ -30,7 +30,7 @@ Use `live-server` from index.html and from the deployed website: https://ellie-l
 
 ## User Stories
 
-### 1. As a User...I want to test my knowledge with random questions in a fun and interactive way(Extra Large) ###
+### 1. As a User...I want to test my knowledge with random questions in a fun and interactive way (Time Frame: extra large) ###
 
 **Feature Tasks**  
         a. Generate random questions  
@@ -38,13 +38,13 @@ Use `live-server` from index.html and from the deployed website: https://ellie-l
         a. Ensure questions render randomly
 
 
-### 2. As a User...I want to challenge myself by increased difficulty with time constraint(medium). ### 
+### 2. As a User...I want to challenge myself by increased difficulty with time constraint (Time Frame: medium). ### 
  **Feature Tasks**  
         a. Able to modify the time constraint  
 **Acceptance Tests**  
         a. the game stops at end of time constraint
 
-### 3. As a User...I want to be able to see the top scores of all the users(medium). ###
+### 3. As a User...I want to be able to see the top scores of all the users (Time Frame: medium). ###
 
 **Feature Tasks**   
         a. display end score for user  
@@ -53,7 +53,7 @@ Use `live-server` from index.html and from the deployed website: https://ellie-l
         a. final top user scores update with new top user score
 
 
-### 4. As a User...I want to be a random character with a unique Bio(medium). ###
+### 4. As a User...I want to be a random character with a unique Bio (Time Frame: medium). ###
 
 **Feature Tasks**  
         a. Generate random character traits  
@@ -61,7 +61,7 @@ Use `live-server` from index.html and from the deployed website: https://ellie-l
         a. no consecutive two duplicates of characters
         
 
-### 5. As a User...I want to be rewarded for completing a challenge(medium) ###
+### 5. As a User...I want to be rewarded for completing a challenge (Time Frame: medium) ###
 
 **Feature Tasks**  
         a. User will progress through questions as questions are correctly answered.  
@@ -106,27 +106,42 @@ Use `live-server` from index.html and from the deployed website: https://ellie-l
 6. Delete unused images in image folder and unused image links in README
 
 ## Functions ##
-1. function MakeUserArray(username): 
-        a. creates the MakeUserArray object each time a user plays the game by inserting the variable username. 
-        b. the user is then assigned a property name (username) and property score (score) and stored in an array userArray.
-        c. This is only used in the index.html page load.
-2. Local Storage:  
-        a. function saveLocalStorageArray() : will save userArray to local storage using the stringify method (also described later) with the key 'current user'.
-        b. function parseLocalStorageArray = retrieves the userArray with the key 'current user'.
-        c. It is used in all three game html pages - index.html, Game.html, scoreBoard.html. 
+1. function MakeUserArray(username):   
+
+        a. creates the MakeUserArray object each time a user plays the game by inserting the variable username.   
+        b. the user is then assigned a property name (username) and property score (score) and stored in an array userArray.  
+        c. This is only used in the index.html page load.  
+2. Local Storage:    
+
+        a. function saveLocalStorageArray()  
+
+                (i) will save userArray to local storage using the stringify method (also described later) with the key 'current user'. 
+
+        b. function parseLocalStorageArray   
+
+                (i) retrieves the userArray with the key 'current user'.  
+
+        c. Both functions are used in all three game html pages - index.html, Game.html, scoreBoard.html.   
+
 3. Riddles: 
-        a. createRiddleArray
-                1. (new.Riddle) creates all the riddles to be used later with random riddle function.
-                2. dependent on the riddle function constructor
-        b. function Riddle
-                1. constructs the riddle.
-                2. has four choice answers that compare to the right answer.
-                3. createRiddleArray is dependent on this.
+
+        a. function createRiddleArray 
+
+                (i) (new.Riddle) creates all the riddles to be used later with random riddle function.  
+                (ii) dependent on the riddle function constructor  
+
+        b. function Riddle (object constructor)
+
+                (i) constructs the Riddle objects and pushes it into the riddleArray.  
+                (ii) has four choice answers that compare to the right answer.  
+                (iii) createRiddleArray is dependent on this.    
 4. Questions Loop through: 
-        a. function nextQuestion()
-                1. hides and shows each question and 4 answer buttons.
-                2. checks answer to determine correct or incorrect.
-                3. decrements round until 0 then displays userscore.
+  
+        a. function nextQuestion()  
+         
+                (i) hides and shows each question and 4 answer buttons.  
+                (ii) checks answer to determine correct or incorrect.  
+                (iii) decrements round until 0 then displays userscore.  
 
 
 ## Methods ##
@@ -134,5 +149,8 @@ Use `live-server` from index.html and from the deployed website: https://ellie-l
 2.   [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) : Used to stringify our UserArray (array of Objects) so that it can be stored in local storage and retrieved with each page load.  
 3.   [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) : Used to parse elements stored in Local Storage.   
 
-### GitHub Project Links ###
-We used our Github [Project](https://github.com/Ellie-Lucky-Go-Mochi/Escape-Room/projects) links to follow our to-do list and complete our tasks.
+## Team Communication : GitHub Project Links ##
+1. We used our Github [Project](https://github.com/Ellie-Lucky-Go-Mochi/Escape-Room/projects) links to follow our to-do list and complete our tasks.  
+
+2. We used [Slack](https://slack.com/) to communicate between team members and keep up to date on our github changes.
+
