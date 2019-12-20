@@ -78,7 +78,6 @@ Use `live-server` from index.html and from the deployed website: https://ellie-l
 ## Resources ##
 [Random Number Generator from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)    
 [Google Fonts](https://fonts.google.com/?category=Display&selection.family=Rammetto+One)  
-??[Chart JS](https://www.chartjs.org/docs/latest/)   
 [Timer Function](https://www.geeksforgeeks.org/javascript-timer/)  
 [Show/Hide Elements](https://gomakethings.com/how-to-show-and-hide-elements-with-vanilla-javascript/) 
 [Rain effect](https://github.com/bikkimahato/HTML-CSS-Projects/tree/master/RainAnimation)  
@@ -89,10 +88,6 @@ Use `live-server` from index.html and from the deployed website: https://ellie-l
 
 
 ## Image Links ##
-[HomePage-Brick Image](https://unsplash.com/)  
-[GamePage-Brick Image](https://unsplash.com/)  
-[Blood-splash](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlYvyNujTDMFpxcN6xzhcmHbil44f3ilcbK8CSVN_Kjp3ALhJJJg&s)  
-[Blood-hand]( https://media.wired.com/photos/5bd262d4b1e96429a704ba17/master/w_2560%2Cc_limit/bloodyhand_top-1036615756.jpg)  
 [Background Image for Home Page](https://get.wallhere.com/photo/night-Moon-moonlight-swamp-house-haunted-digital-art-1149294.jpg)  
 [Rain Effect on Home page](https://github.com/bikkimahato/HTML-CSS-Projects/tree/master/RainAnimation)  
 [Background Image for Game Page](https://unsplash.com/photos/GhxWry42_zQ)  

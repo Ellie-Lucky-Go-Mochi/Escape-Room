@@ -1,16 +1,11 @@
 'use scrict';
 ///// GLOBAL ARRAYS /////
-// var ageArray = [];
-// var ageIndexArray = [];
-// var randomAgeIndex = 0;
 var riddleArray = [];
 var riddleIndexArray = [];
 var randomRiddleIndex = 0;
 var widthPic = [368, 348, 338, 318, 288, 268, 248, 218, 188, 168];
 var opacityPic = 0.13;
 
-// var allergyArray = [];
-// var allergyIndexArray = [];
 var userArray = [];
 var parseLocalStorageArray = [];
 
@@ -77,79 +72,6 @@ function retrieveUserArray() {
   }
 }
 
-// // Creating the Age trait array
-// function Age(age, reply, choiceOne, choiceTwo) {
-//   this.age = age;
-//   this.reply = reply;
-//   this.choiceOne = choiceOne; ///choice
-//   this.choiceTwo = choiceTwo; //choices
-//   // this.indexArray = [];
-//   ageArray.push(this);
-// }
-
-// function createAgeArray() {
-//   new Age(16, 'N', 'Y', 'N');
-//   new Age(20, 'N', 'Y', 'N');
-//   new Age(25, 'Y', 'Y', 'N');
-//   new Age(40, 'Y', 'Y', 'N');
-//   new Age(55, 'Y', 'Y', 'N');
-//   new Age(80, 'Y', 'Y', 'N');
-// }
-// /////// CREATING THE FIRST AGE QUESTION///
-// function createAgeQuestion() {
-//   randomAgeIndex = randomIndex(ageArray.length);
-//   displayBio(ageArray[randomAgeIndex].age);
-//   makeAgeQuestion();
-//   makeAgeButton();
-//   buttonAgeCheckAnswer();
-// }
-// ///// create Age question////////
-// function displayBio(age) {
-//   console.log(`you are a ${age} year old and have stumbled up a beaten down house with a big red metal door. At first you are hesistant to go in, but you notice that it is {weather} outside. Upon entering, you recall someone before saying you are hangry, so you reach into your backpack and pull out a candy bar to munch on. Unfortunately you notice it contains {allergy} which you are deathly allergic to. after tossing the death bar, you turn to leave rather than starve in a building and notice the door is shut and bolted locked and electrified. you now have to find a way out.....   `);
-
-// }
-// ////////// create Age question///
-// function makeAgeQuestion() {
-//   // uniqueRandomNumber();
-//   p = document.createElement('p');
-//   p.textContent = 'You see a can of beer. It looks fresh and chilled. No one is watching. What the heck? Just drink it'; questionBox.appendChild(p);
-// }
-
-// ///// GAME PAGE: MAKE AGE BUTTONS TO DOM /////
-// function makeAgeButton() {
-//   btnOne = document.createElement('button');
-//   btnOne.textContent = ageArray[randomAgeIndex].choiceOne;
-//   buttonBox.appendChild(btnOne);
-
-//   btnTwo = document.createElement('button');
-//   btnTwo.textContent = ageArray[randomAgeIndex].choiceTwo;
-//   buttonBox.appendChild(btnTwo);
-// }
-// //////// GAME PAGE: MAKE AGE BUTTONS TO DOM///////////
-// function buttonAgeCheckAnswer() {
-//   btnOne.addEventListener('click', checkAgeAnswer);
-//   btnTwo.addEventListener('click', checkAgeAnswer);
-// }
-///// GAME PAGE: FUNC TO CHECK AGE ANSWERS and add SCORE /////
-function checkAgeAnswer(event) {
-  event.preventDefault();
-  var button = event.target.textContent;
-  console.log(button);
-  if (button === ageArray[randomAgeIndex].reply) {
-    show(answer);
-    document.getElementById('answer').innerHTML = 'That is right!';
-    currentUserScore += 100;
-    console.log('this is the current user Score', userArray[currentUserIndex].username, currentUserScore);
-    hide(buttonBox);
-  }
-  else {
-    hide(buttonBox);
-    show(answer);
-    document.getElementById('answer').innerHTML = 'Thats wrong!!';
-  }
-}
-
-
 ///// RIDDLE CONSTRUCTOR /////
 
 function Riddle(riddle, reply, choiceOne, choiceTwo, choiceThree, choiceFour) {
@@ -200,32 +122,6 @@ function createRiddleArray() {
   new Riddle('What kills by drowning but is never wet?', 'quicksand', 'quicksand', 'tornado', 'dryer', 'washingmachine');
   new Riddle('What goes up but never comes down?', 'age', 'tomorrow', 'satellite', 'age', 'ego');
 }
-///// create bio traits
-
-// Creating the Allergy trait array
-// function Allergy(allergy, eatable, eat, choiceOne, choiceTwo, choiceThree, choiceFour) {
-//   this.allergy = allergy;
-//   this.eatable = eatable;
-//   this.eat = eat;
-//   this.choiceOne = choiceOne; ///choice
-//   this.choiceTwo = choiceTwo; //choices
-//   // this.choiceThree = choiceThree;
-//   // this.choiceFour = choiceFour;
-//   allergyArray.push(this);
-// }
-
-// function createAllergyArray() {
-//   new Allergy('shellfish', 'sushi', 'Hell no', 'yes, of course', 'Hell no');
-//   new Allergy('peanuts', 'fresh rolls with peanut sauce', 'Hell no', 'yes, of course', 'Hell no');
-//   new Allergy('dairy', 'icecream', 'Hell no', 'yes, of course', 'Hell no');
-//   new Allergy('soy', 'sushi with sauce on it', 'Hell no', 'yes, of course', 'Hell no');
-//   new Allergy('fava beans', 'asparagus and favabean salad', 'Hell no', 'yes, of course', 'Hell no');
-//   // new Allergy ('shellfish', 'salmon cookies', 'Y');
-//   // new Allergy ('peanuts', 'pecan pie', 'Y');
-//   // new Allergy ('dairy', 'vegan pie','Y');
-//   // new Allergy ('soy', 'chickpea and rice', 'Y');
-//   // new Allergy ('fava beans', 'edamame', 'Y' );
-// }
 
 //// generate random riddles/////
 function uniqueRandomNumber() {
@@ -284,6 +180,7 @@ function checkAnswer(event) {
     currentUserScore += 100;
     console.log('this is the current user Score', userArray[currentUserIndex].username, currentUserScore);
     hide(buttonBox);
+
   }
   else {
     hide(buttonBox);
@@ -345,15 +242,6 @@ function onGamePageLoad() {
 
 /////// GAME PAGE: gets loaded
 onGamePageLoad();
-
-
-
-
-
-
-// bio's
-// console.log(`you are a ${age} year old and have stumbled up a beaten down house with a big red metal door. At first you are hesistant to go in, but you notice that it is ${weather} outside. Upon entering, you recall someone before saying you are hangry, so you reach into your backpack and pull out a candy bar to munch on. Unfortunately you notice it contains ${allergy} which you are deathly allergic to. after tossing the death bar, you turn to leave rather than starve in a building and notice the door is shut and bolted locked and electrified. you now have to find a way out.....   `);
-
 
 
 
