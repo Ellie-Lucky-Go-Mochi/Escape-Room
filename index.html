@@ -13,7 +13,9 @@
 </head>
 
 <body id="page1" background="./img/night-Moon-moonlight-swamp-house-haunted-digital-art-1149294.jpg">
-<audio src="./audio/thunder_sound_FX-Grant_Evans-1523270250.mp3" autoplay>
+<iframe src="./audio/250-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+<audio id="player" autoplay loop>
+    <source src="./audio/thunder_sound_FX-Grant_Evans-1523270250.mp3" type="audio/mp3">
 </audio>
     <div class="rain">
         <div class="userBox">
@@ -24,11 +26,19 @@
                     <input id="name" type="text" required minlength="2" maxlength="10">
                     <input id="gamepage" type="submit" value="submit"
                     onclick= "location.href = './html/Game.html';">
-                    <!-- <button id="nextPage" onclick="location.href = './html/AboutMe.html';">About the developers
-                    </button> -->
-                
                 </fieldset>
             </form>
+           
+            <div id="howToPlay">How to play</div>
+                <ol>
+                    <li>Proceed Into House!</li>
+                    <li>Answer the Witty Riddles</li>
+                    <li>Correct answers grant you points</li>
+                    <li>High Scores display at the end</li>
+                </ol>
+            
+            <!-- <button type="submit"id="aboutUs">About us</button> -->
+                
             <section id="question"></section>
         </body>
     </div>

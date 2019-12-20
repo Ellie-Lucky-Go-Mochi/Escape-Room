@@ -1,17 +1,34 @@
 
-body {
-  text-align: center;
-}
-
-
 img{
   border-radius: 50%;
+  float: left;
+  
+ 
 }
 
+#nextPage{
+  font-size: 30px;
+  float:right;
+}
+#about-me{
+  background:black;
+ 
+  width: 70%;
+  margin-left: 20%;
+  
+}
+.all-image > a{
+  color:white;
+}
+#image-box > a:hover{
+  text-decoration: underline white;
+  color: blue;
+  
+}
 .image-box{
 
   width: 50%;
-  height: 50%;
+
   text-align: center;
 }
 .image-box > p{
@@ -29,35 +46,82 @@ img{
   font-size: 15px;
   margin: 0;
   padding: 0px;
- /* box-shadow: none; */
  color: white;
 }
 
 #header{
-  font-size: 80px;
+  font-family: 'Creepster', cursive;
+  font-size: 60px;
   text-align: center;
   color: white;
 }
 #all-page{
-  border: solid black;
-  width: 50%;
-  margin-left: 20%;
-  
+ 
+  vertical-align: left;
+ 
 }
-.all-image{
-
+#nextPage:hover{
+  color: green;
 }
 #nextPage{
   font-size: 30px;
 }
 #about-me{
-  background: #333333;
+  background: black;
+ 
 }
 .all-image > a{
   color:white;
 }
 #image-box > a:hover{
   text-decoration: underline white;
-  color: blue;
+
   
 }
+#fourth-image{
+  margin-top: 10px;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  margin-left: 3%;
+}
+
+#first-column{
+  margin-top: 4%;
+  margin-left: 10%;
+}
+#second-column{
+  margin-top: 4%;
+  margin-left: 10%;
+}
+#third-column{
+  margin-top:4%;
+  margin-left: 10%;
+}
+#fourth-column{
+  margin-top: 4%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+button:hover {
+  box-shadow: 0 0 20px rgb(250, 13, 13);
+  background-color: black;
+  color: rgb(240, 214, 214);
+  transition-duration: 0.4s;
+}
+
+button {
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Creepster', cursive;
+    margin: 2%;
+    background-color: black;
+    color: black;
+    border-color:rgb(206, 31, 31) ;
+    background-color: rgb(206, 31, 31);
+    border-radius: 40% 60% 90% 100%;
+    outline: none;
+}
+

@@ -48,10 +48,10 @@ function findTopScore(){
 /// Make table and attach the top Scores///
 function displayHeader(){
   var thEl = document.createElement('th');
-  thEl.textContent = 'User Name';
+  thEl.textContent = 'User';
   tbrow.appendChild(thEl);
   thEl = document.createElement('th');
-  thEl.textContent = 'High Scores';
+  thEl.textContent = 'Scores';
   tbrow.appendChild(thEl);
   table.appendChild(tbrow);
 }
