@@ -52,8 +52,8 @@ button {
     margin: 2%;
     background-color: black;
     color: black;
-    border-color:rgb(223, 30, 30) ;
-    background-color: rgb(223, 30, 30);
+    border-color:rgb(250, 13, 13) ;
+    background-color: rgb(250, 13, 13);
     border-radius: 40% 60% 90% 100%;
     outline: none;
 }
