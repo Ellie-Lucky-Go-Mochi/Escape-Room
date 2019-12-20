@@ -10,16 +10,23 @@
     <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Sancreek&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Girassol|Rammetto+One&display=swap" rel="stylesheet">
-  
+
     <title>Escape Room</title>
 </head>
 
 <body>
+    <audio id="player" autoplay loop>
+        <source src="../audio/forest.mp3">
+    </audio>
+
     <h1>
         Top Five Scores
     </h1>
-    <div id="table"></div>
-      
+    <div>
+    <table id="table"></table>
+    </div>  
+
+
     <button id="nextPage" onclick="location.href = '../index.html';">Play Again
 
     </button>
