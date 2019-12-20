@@ -154,3 +154,23 @@ Use `live-server` from index.html and from the deployed website: https://ellie-l
 
 2. We used [Slack](https://slack.com/) to communicate between team members and keep up to date on our github changes.
 
+## Task Distribution ##  
+ 
+                Vij: worked on creating the riddleArray, finding timer function(never used), completed the local storage functions and generating the top scores.  
+
+                Ally and Brendon: worked together to generate questions and create buttons as well check the right answer and generate the next question.  
+
+                Ally: CSS for the game page, set up html for all the pages  
+
+                Brendon: CSS for the Home Page  
+
+                Brendon and Henok: troubleshooting through the radiobuttons and randomization of questions
+
+                Henok:  html and CSS for the AboutMe page and making radio buttons (never used)
+
+                Vij and Ally:  Intial CSS for home page and game page
+
+                Vij and Henok:  attempted introducing age traits and bio into the game
+
+                Mob:  planning and executing most of app.js, clean up of the code, deleting files and redundant content including most of the app.js, README content verification, final project styling
+
