@@ -4,14 +4,16 @@ body {
     background-image: url(../img/scorepageimg.jpg!d);
     background-position: center;
     background-size: 150%;
-
+    background-repeat: no-repeat;
+    font-size: 1.5em;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 5em;
     padding: 4%;
     font-family: 'Creepster', cursive;
     text-shadow: 0px 0px 15px rgb(220, 5, 5) ;
+    
 }
 
 #table {
@@ -22,13 +24,14 @@ h1 {
 th {
     font-family: 'Girassol', cursive;
     padding: 10%;
-    font-size: 1.5em;
+    font-size: 4em;
 
 }
 
 td {
     font-family: 'Girassol', cursive;
     padding: 2%;
+    /* font-size: 3em; */
 }
 
 button {
