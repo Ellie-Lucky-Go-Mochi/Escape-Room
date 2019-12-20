@@ -6,6 +6,8 @@
 var riddleArray = [];
 var riddleIndexArray = [];
 var randomRiddleIndex = 0;
+var widthPic = [368, 348, 338, 318, 288, 268, 248, 218, 188, 168];
+var opacityPic = 0.13;
 
 // var allergyArray = [];
 // var allergyIndexArray = [];
@@ -300,6 +302,9 @@ function nextQuestion() {
   hide(btnThree);
   hide(btnFour);
   var nextQ = document.getElementById('nextQuestion');
+  document.getElementById('scaryLady').width = widthPic[round];
+  opacityPic = opacityPic + 0.01;
+  document.getElementById('scaryLady').style.opacity = opacityPic;
   if (round === 0) {
     answer.innerHTML = `Your score is: ${currentUserScore}`;
     show(answer);

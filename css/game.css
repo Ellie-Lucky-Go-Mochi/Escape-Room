@@ -2,7 +2,6 @@ body {
     text-align: center;
     margin: auto;
     max-width: 800px;
-    /* background-image: url(/img/brick2.jpg); */
     background-image: url(../img/room.jpg);
     background-position: center;
     background-size: 150%;
@@ -11,13 +10,14 @@ body {
 }
 
 img {
+    margin:auto;
+    text-align: center;
     z-index: -10;
-   position: absolute;
-   opacity: 0.2;
-   top: 20%;
-   left: 40%;
+    position: absolute;
+    opacity: 0.1;
+    top: 30%;
+   left: 40%; 
    /* box-shadow: 0px 0px 15px rgb(255, 254, 254); */
-   /* text-shadow: 0px 0px 15px rgb(255, 254, 254); */
 
 }
 
