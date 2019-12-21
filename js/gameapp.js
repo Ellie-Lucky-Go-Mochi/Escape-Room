@@ -22,6 +22,8 @@ var buttonBox = document.getElementById('button-container');
 var nextPage = document.getElementById('nextPage');
 var answer = document.getElementById('answer');
 var p = document.createElement('p');
+var nextQ = document.getElementById('nextQuestion');
+
 
 
 ///// GAME PAGE: CREATE QUESTION /////
@@ -175,17 +177,22 @@ function checkAnswer(event) {
   var button = event.target.textContent;
   console.log(button);
   if (button === riddleArray[randomRiddleIndex].reply) {
+    var nextQ = document.getElementById('nextQuestion');
     show(answer);
     document.getElementById('answer').innerHTML = 'That is right!';
     currentUserScore += 100;
     console.log('this is the current user Score', userArray[currentUserIndex].username, currentUserScore);
     hide(buttonBox);
+    show(nextQ);
 
   }
   else {
     hide(buttonBox);
     show(answer);
     document.getElementById('answer').innerHTML = 'Thats wrong!!';
+    nextQ = document.getElementById('nextQuestion');
+    show(nextQ);
+
   }
 }
 
@@ -198,7 +205,9 @@ function nextQuestion() {
   hide(btnTwo);
   hide(btnThree);
   hide(btnFour);
-  var nextQ = document.getElementById('nextQuestion');
+  hide(nextQ);
+  // nextQ = document.getElementById('nextQuestion');
+  // hide(nextQ);
   document.getElementById('scaryLady').width = widthPic[round];
   opacityPic = opacityPic + 0.01;
   document.getElementById('scaryLady').style.opacity = opacityPic;
@@ -236,6 +245,7 @@ function onGamePageLoad() {
   p.textContent = riddleArray[randomRiddleIndex].riddle;
   questionBox.appendChild(p);
   hide(nextPage);
+  hide(nextQ);
   makeButton();
   buttonCheckAnswer();
 }
