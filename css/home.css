@@ -5,7 +5,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Creepster', cursive;
-    font-size: 200%;
+    font-size: 240%;
 }
 .rain {
     height: 100vh;
@@ -56,7 +56,7 @@ body {
      padding-top: 5%;
  }
  .userBox {
-    text-shadow: 0px 0px 15px rgb(0, 250, 54);
+    text-shadow: 0px 0px 15px rgb(255, 60, 0);
     margin: auto;
     text-align: center;
  }
@@ -74,14 +74,14 @@ fieldset {
 }
 input[type=submit] {
     border: none;
-    text-shadow: 0px 0px 15px rgb(22, 252, 2);
+    text-shadow: 0px 0px 15px rgb(252, 2, 2);
     outline: none;
     font-size: 1em;
   }
   
   input[type=text] {
     border: none;
-    background-color: rgba(0, 255, 34, 0.473);
+    background-color: rgba(255, 0, 0, 0.473);
     text-align: center;
     outline: none;
     font-size: 1em;
