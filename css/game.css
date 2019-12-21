@@ -25,7 +25,7 @@ img {
 
 #answer {
     font-family: 'Girassol', cursive;
-    font-size: 20px;
+    font-size: 3em;
     color: white;
     margin: 2%
     
@@ -39,6 +39,8 @@ img {
     -webkit-text-stroke: 0.5px rgb(0, 0, 0);
     text-shadow: 0px 0px 15px rgb(255, 254, 254);
 }
+
+
 
 button:hover {
   box-shadow: 0 0 20px rgb(250, 13, 13);
@@ -61,7 +63,8 @@ button {
 }
 
 #nextPage {
-    width: 10%;
+    width: 20%;
     text-align: center;
     margin-left: 25%;
+
 }
